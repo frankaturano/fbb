@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Five Boroughs Brewing Co. | Quality</title>
+  <meta property="og:image" content="//fiveboroughs.com/images/explore-three.jpg" />
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../fonts/stylesheet.css" type="text/css" rel="stylesheet">
+  <link href="../styles/reset.css" type="text/css" rel="stylesheet">
+  <link href="../styles/stylesheet.css" type="text/css" rel="stylesheet">
+  <link href="../styles/quality-page.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="quality-page locked">
+  <!-- WELCOME -->
+  <section class="welcome">
+    <div class="absolute-center">
+      <img class="united-logo" src="../images/united-logo.png" />
+      <h1>
+        Five Boroughs Brewing Co.
+        Makes craft beer that brings New York City together.
+      </h1>
+      <div class="age__gate">
+        <div class="age__gate--question">Are you over 21?</div>
+        <div class="age__gate--choice choice--yes">YES</div>
+        <div class="age__gate--choice choice--no">NO</div>
+        <div class="age__gate--disclaimer">You must be of legal drinking age to join us. Sorry, kids.</div>
+      </div>
+    </div>
+  </section>
+  <script src="../scripts/cookies.js"></script>
+  <!-- Navigation -->
+  <div class="visit-navigation-placeholder">
+    <!-- Used to hold the beer-navigator's place on the body when it goes sticky -->
+  </div>
+  <nav>
+    <div class="limit-container">
+      <a href="../"><span class="logo">Five Boroughs Brewing Co.</span></a>
+      <img src="../images/hamburger.png" class="hamburger">
+      <div class="nav-close">+</div>
+      <ul>
+        <li>
+          <a href="../beer/">Beer</a>
+        </li>
+        <li class="active">
+          <a href="../quality/">Quality</a>
+        </li>
+        <li>
+          <a href="../story/">Story</a>
+        </li>
+        <li>
+          <a href="../culture/">Culture</a>
+        </li>
+        <li>
+          <a href="../visit/">Visit</a>
+        </li>
+        <li class="nav-social-icons">
+          <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/"></a>
+          <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/"></a>
+          <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs"></a>
+          <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo"></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Main -->
+  <div class="limit-container">
+    <h1>
+      If you had a pint that you loved, a growler fill that didn’t hold up, or a can that you know we wouldn’t be proud to have the Five Boroughs Brewing Co. name on, our team wants to know about it.
+    </h1>
+  </div>
+  <img class="quality-hero" src="../images/quality-hero.jpg" />
+
+  <div class="limit-container">
+    <h3>Tell Us About It</h3>
+    <p class="dek">What kind of place did you buy our beer?</p>
+  </div>
+
+  <div class="steps-wrapper">
+
+    <div class="step active step-one limit-container" data-dek="What kind of place did you buy our beer?">
+      <div class="choice place-of-purchase bar" data-form-value="Local Bar">
+        <img src="../images/BAR.svg" />
+        <label>Local Bar</label>
+      </div>
+      <div class="choice place-of-purchase store" data-form-value="The Corner Store">
+      <img src="../images/STORE.svg" />
+        <label>The Corner Store</label>
+      </div>
+      <div class="choice place-of-purchase events" data-form-value="Happenings In Town">
+        <img src="../images/EVENTS.svg" />
+        <label>Happenings In Town</label>
+      </div>
+      <div class="choice place-of-purchase taproom" data-form-value="Our Taproom">
+        <img src="../images/TAPROOM.svg" />
+        <label>Our Taproom</label>
+      </div>
+
+      <div class="step-nav">
+        <span class="nav-prev disabled"></span><span class="nav-next"></span>
+      </div>
+    </div>
+
+    <div class="step step-two limit-container" data-dek="Where did you taste this beer? Don’t worry—this stays between us.">
+      <label>Name:</label>
+      <input type="text" data-form-value="query" />
+
+      <div class="step-nav">
+        <span class="nav-prev"></span><span class="nav-next"></span>
+      </div>
+    </div>
+
+    <div class="step step-three limit-container" data-dek="How was your beer packaged?">
+      <div class="choice place-of-purchase draft" data-form-value="On Draft">
+        <img src="../images/DRAFT.svg" />
+        <label>On Draft</label>
+      </div>
+      <div class="choice place-of-purchase package" data-form-value="In Cans">
+        <img src="../images/PACKAGE.svg" />
+        <label>In Cans</label>
+      </div>
+      <div class="choice place-of-purchase growler" data-form-value="Growlers">
+        <img src="../images/GROWLER.svg" />
+        <label>Growlers</label>
+      </div>
+
+      <div class="step-nav">
+        <span class="nav-prev"></span><span class="nav-next"></span>
+      </div>
+    </div>
+
+    <div class="step step-four limit-container" data-dek="Consider us beer detectives.">
+      <label>Date Observed:</label>
+      <input type="date" max="9999-12-31" />
+      <div class="date-packaged-grouping">
+        <label>Date Packaged:</label>
+        <input type="date" max="9999-12-31" />
+      </div>
+      <label>Type Of Beer:</label>
+      <div class="select-custom">
+        <select>
+          <option>IPA</option>
+          <option>PILSNER</option>
+          <option>HOPPY LAGER</option>
+          <option>GOSE</option>
+          <option>SUNSET SWING SPRING ALE</option>
+        </select>
+      </div>
+
+      <div class="step-nav">
+        <span class="nav-prev"></span><span class="nav-next"></span>
+      </div>
+    </div>
+
+    <!-- <div class="step step-five limit-container" data-dek="Let’s talk. Tell us if you loved your beer, or if something wasn’t quite right. And let us know if you’d be okay with us following up.">
+      <label>Can we reach out?</label>
+      <span class="reach-out-yes">YES</span> <span class="reach-out-no">NO</span>
+
+      <div class="step-nav">
+        <span class="nav-prev"></span><span class="nav-next"></span>
+      </div>
+    </div> -->
+
+    <div class="step step-five limit-container" >
+
+      <form id="quality-form">
+        <label>Name:</label>
+        <input type="text" required="true" />
+        <label>Email:</label>
+        <input type="email" required="true" />
+        <label>Comments:</label>
+        <textarea></textarea>
+        <label>Can we reach out?</label>
+        <span class="reach-out-yes chosen">YES</span> <span class="reach-out-no">NO</span>
+        <input type="submit" value="Submit" />
+      </form>
+
+      <div class="step-nav">
+        <span class="nav-prev"></span><span class="nav-next disabled"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <section class="contact">
+      <div class="limit-container">
+        <div class="contact__left">
+          Contact <br>
+          Five Boroughs Brewing Co.
+        </div>
+        <div class="contact__right">
+          <div class="contact--social">
+            <div class="label">We're On</div>
+            <div class="link link--facebook">
+              <a target="_blank" href="https://www.facebook.com/fiveboroughsbrewing/">Facebook</a>
+            </div>
+            <div class="link link--instagram">
+              <a target="_blank" href="https://www.instagram.com/fiveboroughsbrewing/">Instagram</a>
+            </div>
+            <div class="link link--twitter">
+              <a target="_blank" href="https://twitter.com/fiveboroughs">Twitter</a>
+            </div>
+            <div class="link link--untappd">
+              <a target="_blank" href="https://untappd.com/FiveBoroughsBrewingCo">Untappd</a>
+            </div>
+            <!-- Inquiries block shoul be in it's own thing one day? -->
+            <div class="label label--divider">Inquiries</div>
+            <div class="link link--sales">
+              <a href="../sales/">Sales</a>
+            </div>
+            <div class="link link--media">
+              <a href="../media/">Media</a>
+            </div>
+          </div>
+          <div class="contact--mail">
+            <div class="label">Email Five Boroughs</div>
+            <div class="link">Cheers@fiveboroughs.com</div>
+            <div class="label label--divider">Call Five Boroughs</div>
+            <a href="tel:718-355-8575" style="text-decoration: none; cursor: pointer">
+              <div class="link">718.355.8575</div>
+            </a>
+            <div class="label label--divider">Our Address</div>
+            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" style="text-decoration: none; cursor: pointer">
+              <div class="link">215 47<sup>th</sup> Street</div>
+              <div class="link">Brooklyn, NY 11220</div>
+            </a>
+          </div>
+          <div class="contact--hours">
+             <div class="label">Taproom Hours</div>
+             <div class="link">Opening Soon</div>
+            <!-- <div class="link">Monday&mdash;Thursday</div>
+            <div class="link">11am&mdash;10pm</div>
+            <div class="link">Friday&mdash;Saturday</div>
+            <div class="link">11am&mdash;11pm</div>
+            <div class="link">Sunday</div>
+            <div class="link">11am&mdash;8pm</div> -->
+          </div>
+          <div class="check-twitter link link--twitter"><a href="https://twitter.com/fiveboroughs" target="_blank">Check Twitter For Holiday Hours and Special Event Closings</a></div>
+        </div>
+      </div>
+    </section>
+    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym"></a>
+    <section class="footer--light">
+      <div class="limit-container">
+        <div class="copyright">&copy; 2017 Five Boroughs Brewing Co.</div>
+        <div class="back-to-top"></div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="../scripts/smoothscroll.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/quality-page.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBYCI314rXsHqrx28KLCPGAroWoC5_k500"></script>
+  <script>
+  function initialize() {
+    var input = document.querySelector('.step-two input');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    var dek = document.querySelector('.dek');
+    var steps = document.querySelectorAll('.step');
+    var navigators = document.querySelectorAll('.nav-next, .nav-prev');
+    var stepIndex = 0;
+
+    // Handle navigation
+    for(var i = 0; i < navigators.length; i++){
+      navigators[i].addEventListener('click', function(){
+
+        var currentStep = steps[stepIndex];
+
+        // Step two skip logic
+        var stepOneChoice = document.querySelector('.step-one .chosen-choice');
+        var taproomChosen = stepOneChoice.classList.contains('taproom');
+
+        if(this.classList.contains('nav-next') && steps[stepIndex+1]){
+          stepIndex++;
+          // Step two skip logic
+          if(taproomChosen && stepIndex == 1) stepIndex++;
+        }else if(this.classList.contains('nav-prev') && steps[stepIndex-1]){
+          stepIndex--;
+          // Step two skip logic
+          if(taproomChosen && stepIndex == 1) stepIndex--;
+        }
+
+        var nextStep = steps[stepIndex];
+
+        if(currentStep) currentStep.classList.remove('active');
+        if(nextStep) nextStep.classList.add('active');
+        if(currentStep || nextStep){
+          window.scroll({
+            top: document.querySelector('h3').offsetTop - 140,
+            left: 0,
+            behavior: 'smooth'
+          });
+        }
+
+        var newDek = nextStep.getAttribute('data-dek');
+        if(newDek) dek.innerHTML = newDek;
+
+      });
+    }
+
+    var choices = document.querySelectorAll('.choice');
+    for(var i = 0; i < choices.length; i++){
+      choices[i].addEventListener('click', function(){
+        var otherChoices = this.parentElement.querySelectorAll('.choice');
+        for(var j = 0; j < otherChoices.length; j++){
+          otherChoices[j].style.opacity = ".5";
+          otherChoices[j].classList.remove('chosen-choice');
+        }
+        this.style.opacity = "1";
+        this.classList.add('chosen-choice');
+        this.parentElement.classList.add('choice-made');
+
+        // Kill date packaged
+        var stepThreeChoice = document.querySelector('.step-three .chosen-choice');
+        var draftChosen = stepThreeChoice ? stepThreeChoice.classList.contains('draft') : false;
+        if(draftChosen){
+          document.querySelector('.date-packaged-grouping').style.display = 'none';
+        }else{
+          document.querySelector('.date-packaged-grouping').style.display = 'block';
+        }
+        stepFourInputs[0].onchange();
+        stepFourInputs[1].onchange();
+
+      })
+    }
+
+    document.querySelector('.step-two input').addEventListener('keyup', function(){
+      if(this.value){
+        this.parentElement.classList.add('choice-made');
+      }else{
+        this.parentElement.classList.remove('choice-made');
+      }
+    });
+
+    var stepFourInputs = document.querySelectorAll('.step-four input');
+    var validateStepFour = function(){
+      // Kill date packaged
+      var stepThreeChoice = document.querySelector('.step-three .chosen-choice');
+      var draftChosen = stepThreeChoice ? stepThreeChoice.classList.contains('draft') : false;
+
+      if(stepFourInputs[0].value.length > 0 && stepFourInputs[1].value.length > 0){
+        document.querySelector('.step-four').classList.add('choice-made');
+      }else if(stepFourInputs[0].value.length > 0 && draftChosen){
+        // Kill date packaged
+        document.querySelector('.step-four').classList.add('choice-made');
+      }else{
+        document.querySelector('.step-four').classList.remove('choice-made');
+      }
+    };
+    stepFourInputs[0].onchange = validateStepFour;
+    stepFourInputs[1].onchange = validateStepFour;
+
+    document.querySelector('.step-five .reach-out-yes').addEventListener('click', function(){
+      this.parentElement.classList.add('choice-made');
+    });
+    document.querySelector('.step-five .reach-out-no').addEventListener('click', function(){
+      this.parentElement.classList.add('choice-made');
+    });
+
+    document.querySelector('.reach-out-yes').addEventListener('click', function(){
+      this.classList.add('chosen');
+      document.querySelector('.reach-out-no').classList.remove('chosen');
+    });
+    document.querySelector('.reach-out-no').addEventListener('click', function(){
+      this.classList.add('chosen');
+      document.querySelector('.reach-out-yes').classList.remove('chosen');
+    })
+
+
+    document.getElementById('quality-form').addEventListener('submit', function(e){
+      e.preventDefault();
+
+      var data = {
+        'What kind of place did you buy our beer?' : document.querySelector('.step-one .chosen-choice').getAttribute('data-form-value'),
+        'Where did you taste this beer?' : document.querySelector('.step-two input').value,
+        'How was your beer packaged?' : document.querySelector('.step-three .chosen-choice').getAttribute('data-form-value'),
+        'Date Observed' : document.querySelectorAll('.step-four input')[0].value,
+        'Date Packaged' : document.querySelectorAll('.step-four input')[1].value,
+        'Type Of Beer' : document.querySelector('.step-four select').options[document.querySelector('.step-four select').selectedIndex].value,
+        'Name' : document.querySelectorAll('.step-five input')[0].value,
+        'Email' : document.querySelectorAll('.step-five input')[1].value,
+        'Comments' : document.querySelectorAll('.step-five input')[2].value,
+        'Can We Reach Out?' : document.querySelector('.reach-out-yes').classList.contains('chosen') ? 'YES' : 'NO'
+      };
+
+      document.getElementById('quality-form').style.opacity = '.3';
+      document.getElementById('quality-form').style.pointerEvents = 'none';
+      document.querySelector('.step-five .step-nav').style.opacity = '.3';
+      document.querySelector('.step-five .step-nav').style.pointerEvents = 'none';
+      window.scroll({
+        top: document.querySelector('h3').offsetTop - 140,
+        left: 0,
+        behavior: 'smooth'
+      });
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://ggr25pcxsj.execute-api.us-east-1.amazonaws.com/staging/submit');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function() {
+
+        document.getElementById('quality-form').style.display= "none";
+        document.querySelector('.step-five .step-nav').style.display = "none";
+
+        if (xhr.status === 200) {
+          document.querySelector('h3').innerHTML = "Thanks!";
+          document.querySelector('.dek').innerHTML = "This is headed straight to the Five Boroughs quality team, who will be in touch as soon as possible.";
+        } else{
+          document.querySelector('h3').innerHTML = "Sorry!";
+          document.querySelector('.dek').innerHTML = "There was an issue processing your submission. Please email quality@fiveboroughs.com directly. We apologize for the inconvenience.";
+        }
+      };
+      xhr.send(JSON.stringify(data));
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+/*Visit Page Overrides Of Main CSS*/
+.quality-page .logo {
+  background-image: url(../images/footer-logo.png);
+}
+.quality-page nav li{
+  color: #717073;
+}
+.quality-page .hamburger {
+  background: #000;
+  width: 55px;
+  height: 55px;
+  padding: 10px 0;
+  margin: 22px 0;
+}
+.quality-page nav {
+  margin: 80px 0 80px 0;
+  background: #fff;
+}
+.quality-page nav.active,
+.quality-page nav.sticky{
+  margin: 0;
+}
+
+.quality-page h1{
+  font-size: 54px;
+  line-height: 60px;
+}
+.quality-page h2 {
+  font-family: 'pdu-stencil', cursive;
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 60px;
+  text-align: center;
+}
+.quality-page h3 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.quality-page p {
+  font-size: 20px;
+  color: #717073;
+  line-height: 24px;
+}
+.quality-page .dek {
+  font-size: 20px;
+  color: #717073;
+  line-height: 24px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+p.h2-dek{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.quality-hero{
+  margin: 88px 0;
+}
+
+/*STEPS*/
+.steps-wrapper{
+  position: relative;
+  /*padding: 0 100px;*/
+}
+.step{
+  display: none;
+  margin: 70px auto 88px auto;
+  text-align: center;
+  transition: opacity .5s;
+  animation: fadeIn 1.5s forwards;
+  -webkit-animation: fadeIn 1.5s forwards;
+  position: relative;
+}
+.step-nav .nav-next,
+.step-nav .nav-prev {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 0 20px;
+  background-image: url(../images/caret.svg);
+  background-size: 12px;
+  background-position: 15px 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,1);
+  transition: all .2s;
+}
+.step-nav .nav-prev{
+  transform: rotate(180deg);
+}
+.step-nav .nav-next:hover{
+  transform: scale(1.1);
+}
+.step-nav .nav-prev:hover{
+  transform: scale(1.1) rotate(180deg);
+}
+.step-nav .nav-next.disabled,
+.step-nav .nav-prev.disabled,
+.step-nav .nav-next{
+  background-color: rgba(0,0,0,.5);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.step-nav .nav-next.disabled:hover,
+.step-nav .nav-next:hover{
+  transform: none;
+}
+.step-nav .nav-prev.disabled:hover,
+.step-nav .nav-prev:hover{
+  transform: rotate(180deg);
+}
+.choice-made .nav-next{
+  cursor: pointer;
+  pointer-events: all;
+  background-color: rgba(0,0,0,1);
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.step.active{
+  display: block;
+}
+.step-one{
+  font-size: 0;
+}
+.step-five span{
+  font-size: 42px;
+  margin: 0 38px 40px 38px;
+  cursor: pointer;
+  display: inline-block;
+}
+.choice{
+  display: inline-block;
+  width: 20%;
+  margin: 2% 2% 40px 2%;
+  height: auto;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+label{
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+}
+.choice label {
+  margin-top: 15px;
+}
+input,
+select,
+textarea,
+.quality-page input[type="email"]{
+  width: 300px;
+  max-width: 300px;
+  height: 60px;
+  border: 2px solid #717073;
+  color: #717073;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  font-family: 'helsinki-bold', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+}
+textarea{
+  height: 165px;
+  max-height: 165px;
+  resize: none;
+}
+input:focus,
+select:focus,
+textarea:focus{
+  outline: none;
+}
+.select-custom {
+  position: relative;
+  display: inline;
+}
+.select-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 14px;
+  height: 14px;
+  transform: translate(0, -50%) rotate(45deg);
+  border-right: 2px solid #717073;
+  border-bottom: 2px solid #717073;
+  margin-top: -5px;
+}
+.reach-out-yes,
+.reach-out-no{
+  color: #717073;
+  transition: all .2s;
+  margin-bottom: 40px;
+}
+.reach-out-yes.chosen,
+.reach-out-no.chosen {
+  color: #000;
+}
+.quality-page input[type="submit"] {
+  display: block;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  max-width: 200px;
+  border: 2px solid #000;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+.quality-page input[type="submit"]:hover{
+  background: #000;
+  color: #fff;
+}
+
+@media(max-width: 1000px){
+  .choice {
+    width: 40%;
+  }
+}
+
+@media(max-width: 850px){
+  .quality-page h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media(max-width: 760px) {
+  .quality-page nav{
+    margin: 40px 0 40px 0;
+  }
+}
+
+@media(max-width: 650px){
+  .quality-page h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .quality-page h2{
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .choice {
+    width: 46%;
+  }
+  .step .choice:nth-child(odd){
+    margin: 2% 2% 2% 0;
+  }
+  .step .choice:nth-child(even){
+    margin: 2% 0 2% 2%;
+  }
+  .step-one .step-nav,
+  .step-three .step-nav{
+    margin-top: 40px;
+  }
+  .step-three .choice:nth-child(3){
+    margin: 2% 2% 2% 2%;
+  }
+  input, select, textarea{
+    max-width: 100%;
+  }
+  .choice label {
+    font-size: 13px;
+  }
+}
