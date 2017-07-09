@@ -57,11 +57,12 @@ document.getElementById('media-form').addEventListener('submit', function(e){
   document.querySelector('.back-to-top').click();
 
   var data = {};
-  var fields = document.getElementById('media-form').querySelectorAll('input');
+  var fields = document.getElementById('media-form').querySelectorAll('input, textarea');
   for(var i = 0; i < fields.length; i++){
     var fieldName = fields[i].name;
     var fieldType = fields[i].type;
     var fieldVal = fieldType == "datetime-local" ? new Date(fields[i].value).toLocaleString() : fields[i].value;
+    if(fieldVal === 'Invalid Date') fieldVal = fields[i].value
     if(fieldName) data[fieldName] = fieldVal;
   }
 
