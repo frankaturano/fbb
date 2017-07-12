@@ -49,6 +49,16 @@ scroll(); //call the scroll function on load (assists page refresh after scroll)
 
 
 // FORM STUFFS!
+
+try{
+  var tzoffset = (new Date()).getTimezoneOffset() * 60000; //offset in milliseconds
+  var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0,-1);
+  var dtlInput = document.querySelector('input[type="datetime-local"]');
+  dtlInput.value = localISOTime.slice(0,16);
+}catch(e){
+  console.log(e)
+}
+
 document.getElementById('media-form').addEventListener('submit', function(e){
   e.preventDefault();
 
