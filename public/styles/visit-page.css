@@ -50,7 +50,7 @@ p.h2-dek{
 .visit-page .taproom-hours,
 .visit-page .on-tap{
   max-width: 940px;
-  margin: 0 auto;
+  margin: 0 auto 88px auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
