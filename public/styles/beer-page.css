@@ -48,7 +48,7 @@
 }
 /*Beer Item*/
 .beers-list__beer{
-  margin-bottom: 300px;
+  margin-bottom: 250px;
 }
 .beers-list__beer::after {
   content: "";
