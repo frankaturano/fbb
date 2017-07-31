@@ -13,29 +13,16 @@ var beerNavigatorPlaceholder = document.querySelector('.beer-navigator-placehold
 var beerNavigationLinks = document.querySelectorAll('.beer-navigator ul li');
 var beers = document.querySelectorAll('.beers-list__beer');
 
-// Second, let's create a helper function for handling things that might be visible
-var isInViewport = function(el) {
-  var top = el.offsetTop;
-  var left = el.offsetLeft;
-  var width = el.offsetWidth;
-  var height = el.offsetHeight;
-
-  while(el.offsetParent) {
-    el = el.offsetParent;
-    top += el.offsetTop;
-    left += el.offsetLeft;
-  }
-
-  return (
-    top < (window.pageYOffset + window.innerHeight) &&
-    left < (window.pageXOffset + window.innerWidth) &&
-    (top + height) > window.pageYOffset &&
-    (left + width) > window.pageXOffset
-  );
+// This helper function helps return how many pixels of an element are in view
+var pixelsInView = function(el){
+  var elH = el.getBoundingClientRect().height,
+            H = window.innerHeight,
+            r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+  return Math.max(0, t>0? Math.min(elH, H-t) : (b<H?b:H))
 };
 
-// We gotta keep track of visible beers outside of this scroll function
-window.visibleBeers = [];
+window.beerVisibility = {};
+
 // Then, let's define a scroll function that handles all this fanciness
 var scroll = function(){
   if(navigation && beerNavigator && beerNavigatorPlaceholder && beerNavigationLinks && beers){
@@ -59,27 +46,30 @@ var scroll = function(){
 
     // START OF GLOW WHEN IN VIEW STUFF
     for(var i = 0; i < beers.length; i++){
-      var beer = beers[i];
-      var name = beer.querySelector('.beer-details--name').innerHTML;
+      // update the beerVisibility pixel amount for each beer
+      var beer = beers[i].querySelector('.beer-details--name').innerHTML
+      var inViewPxs = pixelsInView(beers[i]);
+      beerVisibility[beer] = inViewPxs;
+    }
 
-      if(isInViewport(beer)){
-        if(visibleBeers.indexOf(name) == -1) visibleBeers.push(name);
+    // determine the beer that is most in view
+    var mostInViewBeer = false;
+    var mostInViewAmt = 0;
+
+    for(beer in beerVisibility) {
+      if (beerVisibility[beer] > mostInViewAmt) {
+        mostInViewAmt = beerVisibility[beer]
+        mostInViewBeer = beer
+      }
+    }
+
+    // hightlight accordingly
+    for(var i = 0; i < beerNavigationLinks.length; i++) {
+      if (beerNavigationLinks[i].innerHTML === mostInViewBeer) {
+        beerNavigationLinks[i].classList.add('active')
       }else{
-        if(visibleBeers.indexOf(name) != -1) visibleBeers.splice(visibleBeers.indexOf(name), 1);
+        beerNavigationLinks[i].classList.remove('active')
       }
-
-      var beerInView = visibleBeers[visibleBeers.length - 1];
-
-      for(var j = 0; j < beerNavigationLinks.length; j++){
-        var link = beerNavigationLinks[j];
-        var linkName = beerNavigationLinks[j].innerHTML;
-        if(beerInView == linkName) {
-          link.classList.add('active');
-        }else{
-          link.classList.remove('active');
-        }
-      }
-
     }
 
   }
