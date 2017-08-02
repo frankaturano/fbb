@@ -203,7 +203,7 @@
 
       if (items.length) {
         for (var i = 0; i < items.length; i++) {
-          menuArea.innerHTML += '\n          <div class="on-tap__beer">\n            <div class="beer--name">' + items[i].name + '</div>\n            <div class="on-tap__beer--info">\n              <p class="beer--dek">' + items[i].description + '</p>\n              <p class="on-tap__beer--label">ABV ' + items[i].abv + '</p>\n            </div>\n          </div>\n        ';
+          menuArea.innerHTML += "<div class=\"on-tap__beer\">\n  <div class=\"beer--name beer--" + items[i].name.replace(/ /g, '').toLowerCase() + "\">" + items[i].name + "</div>\n  <div class=\"on-tap__beer--info\">\n    <p class=\"beer--dek\">" + items[i].description + "</p>\n    <p class=\"on-tap__beer--label\">ABV " + items[i].abv + "%</p>\n  </div>\n</div>";
         }
       } else {
         console.error('No Menu Items Found'); // An error occurred during the request.

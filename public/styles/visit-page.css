@@ -86,35 +86,21 @@ p.h2-dek{
   padding-left: 30px;
   min-width: 100px;
 }
-.on-tap__beer:nth-child(1) .beer--name,
-.on-tap__beer:nth-child(7) .beer--name,
-.on-tap__beer:nth-child(13) .beer--name {
-  color:#00a8c5;
+
+.beer--name.beer--ipa {
+  color: #6cac43;
 }
-.on-tap__beer:nth-child(2) .beer--name,
-.on-tap__beer:nth-child(8) .beer--name,
-.on-tap__beer:nth-child(14) .beer--name {
-  color:#6cac43;
+
+.beer--name.beer--pilsner {
+  color: #f9a01b;
 }
-.on-tap__beer:nth-child(3) .beer--name,
-.on-tap__beer:nth-child(9) .beer--name,
-.on-tap__beer:nth-child(15) .beer--name {
-  color:#ef4044;
+
+.beer--name.beer--gose {
+  color: #bb6cac;
 }
-.on-tap__beer:nth-child(4) .beer--name,
-.on-tap__beer:nth-child(10) .beer--name,
-.on-tap__beer:nth-child(16) .beer--name {
-  color:#f9a01b;
-}
-.on-tap__beer:nth-child(5) .beer--name,
-.on-tap__beer:nth-child(11) .beer--name,
-.on-tap__beer:nth-child(17) .beer--name {
-  color:#bb6cac;
-}
-.on-tap__beer:nth-child(6) .beer--name,
-.on-tap__beer:nth-child(12) .beer--name,
-.on-tap__beer:nth-child(18) .beer--name {
-  color:#790000;
+
+.beer--name.beer--hoppylager {
+  color: #717073;
 }
 
 .taproom-hours__day {
