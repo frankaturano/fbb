@@ -92,48 +92,7 @@
     <h2>What's On Tap</h2>
     <p class="h2-dek">At the Five Boroughs taproom you can always find regulars—both on tap and on stools—plus some special releases you can only find at the brewery. Here’s what we’re pouring today.</p>
     <div class="on-tap__beers">
-      <div class="on-tap__beer">
-        <div class="beer--name">Black Lager</div>
-        <div class="on-tap__beer--info">
-          <p class="beer--dek">Quick style description goes here and here, quick style description goes here and here.</p>
-          <p class="on-tap__beer--label">ABV or IBU</p>
-        </div>
-      </div>
-      <div class="on-tap__beer">
-        <div class="beer--name">IPA</div>
-        <div class="on-tap__beer--info">
-          <p class="beer--dek">Quick style description goes here and here, quick style description goes here and here.</p>
-          <p class="on-tap__beer--label">ABV or IBU</p>
-        </div>
-      </div>
-      <div class="on-tap__beer">
-        <div class="beer--name">Saison</div>
-        <div class="on-tap__beer--info">
-          <p class="beer--dek">Quick style description goes here and here, quick style description goes here and here.</p>
-          <p class="on-tap__beer--label">ABV or IBU</p>
-        </div>
-      </div>
-      <div class="on-tap__beer">
-        <div class="beer--name">Gose</div>
-        <div class="on-tap__beer--info">
-          <p class="beer--dek">Quick style description goes here and here, quick style description goes here and here.</p>
-          <p class="on-tap__beer--label">ABV or IBU</p>
-        </div>
-      </div>
-      <div class="on-tap__beer">
-        <div class="beer--name">Pilsner</div>
-        <div class="on-tap__beer--info">
-          <p class="beer--dek">Quick style description goes here and here, quick style description goes here and here.</p>
-          <p class="on-tap__beer--label">ABV or IBU</p>
-        </div>
-      </div>
-      <div class="on-tap__beer">
-        <div class="beer--name">Style Name Goes Here/Seasonal</div>
-        <div class="on-tap__beer--info">
-          <p class="beer--dek">Quick style description goes here and here, quick style description goes here and here.</p>
-          <p class="on-tap__beer--label">ABV or IBU</p>
-        </div>
-      </div>
+      <!-- MENU LOADED DYNAMICALLY -->
     </div>
     <div class="load-more" style="display:none">
       <span class="load-more-button">Load More</span>
@@ -233,6 +192,43 @@
   <script src="../scripts/smoothscroll.js"></script>
   <script src="../scripts/main.js"></script>
   <script src="../scripts/visit-page.js"></script>
+  <script>
+    'use strict';
+
+    var menuArea = document.querySelector('.on-tap__beers');
+    var menuDek = document.querySelector('.h2-dek');
+
+    // Render a beer menu given items from Untappd's API
+    var renderMenu = function renderMenu(items) {
+
+      if (items.length) {
+        for (var i = 0; i < items.length; i++) {
+          menuArea.innerHTML += '\n          <div class="on-tap__beer">\n            <div class="beer--name">' + items[i].name + '</div>\n            <div class="on-tap__beer--info">\n              <p class="beer--dek">' + items[i].description + '</p>\n              <p class="on-tap__beer--label">ABV ' + items[i].abv + '</p>\n            </div>\n          </div>\n        ';
+        }
+      } else {
+        console.error('No Menu Items Found'); // An error occurred during the request.
+        menuDek.innerHTML += ' Check out the Five Boroughs Brewing Co. lineup on <a target="_blank" style="color: #00a8c5; text-decoration: none" href="https://untappd.com/FiveBoroughsBrewingCo/beer">Untappd</a>.'
+      }
+    };
+
+    // Create a request to get menu items from the Untappd API
+    var utReq = new XMLHttpRequest();
+
+    // Handle the request when it comes through, and render the menu
+    utReq.onreadystatechange = function () {
+      if (utReq.readyState === 4 && utReq.status === 200 && utReq.responseText) {
+        renderMenu(JSON.parse(utReq.responseText).items);
+      } else if (utReq.readyState === 4) {
+        console.error('Recieved a ' + utReq.status + ' from the Untappd API');
+        menuDek.innerHTML += ' Check out the Five Boroughs Brewing Co. lineup on <a target="_blank" style="color: #00a8c5; text-decoration: none" href="https://untappd.com/FiveBoroughsBrewingCo/beer">Untappd</a>.'
+      }
+    };
+
+    // Open and send the request to Untappd
+    utReq.open('GET', 'https://business.untappd.com/api/v1/sections/99950/items', true);
+    utReq.setRequestHeader('Authorization', 'Basic ZnJhbmthdHVyYW5vQGdtYWlsLmNvbTpaOWJ0QXlZdGFiRXhqSFJjdGpkSA==');
+    utReq.send();
+  </script>
 </body>
 
 </html>
