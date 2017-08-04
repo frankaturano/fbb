@@ -444,7 +444,7 @@
     hasReq.onreadystatechange = function () {
       if (hasReq.readyState === 4 && hasReq.status === 200 && hasReq.responseText) {
         var hasReqBeers = JSON.parse(hasReq.responseText).beers;
-        var coreBeers = ['IPA', 'Pilsner', 'Gose'];
+        var coreBeers = ['IPA', 'Pilsner', 'Gose', 'Hoppy Lager'];
 
         var hasReqBeersSorted = coreBeers.concat(hasReqBeers);
 
@@ -463,11 +463,17 @@
         }
       } else if (hasReq.readyState === 4) {
         console.error('Recieved a ' + hasReq.status + ' from the historical archive service');
+        var coreBeers = ['IPA', 'Pilsner', 'Gose', 'Hoppy Lager'];
+        for(var i = 0; i < coreBeers.length; i++) {
+          var beerOption = document.createElement('option');
+          beerOption.innerHTML = coreBeers[i];
+          document.getElementById('type-of-beer').appendChild(beerOption);
+        }
       }
     };
 
-    // Open and send the request to Untappd
-    hasReq.open('GET', 'https://s3.amazonaws.com/five-boroughs-data-stubs/beer-archive.json', true);
+    // Open and send the request to the historical archive service
+    hasReq.open('GET', 'https://d1sseepmmm90kn.cloudfront.net/beer-archive.json', true);
     hasReq.send();
   </script>
 
