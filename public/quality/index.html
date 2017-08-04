@@ -155,12 +155,8 @@
       </div>
       <label>Type Of Beer:</label>
       <div class="select-custom">
-        <select>
-          <option>IPA</option>
-          <option>PILSNER</option>
-          <option>HOPPY LAGER</option>
-          <option>GOSE</option>
-          <option>SUNSET SWING SPRING ALE</option>
+        <select id="type-of-beer">
+
         </select>
       </div>
 
@@ -440,6 +436,40 @@
 
   </script>
 
+  <script>
+    // Create a request to get menu items from the historical archive service
+    var hasReq = new XMLHttpRequest();
+
+    // Handle the request when it comes through, and render the menu
+    hasReq.onreadystatechange = function () {
+      if (hasReq.readyState === 4 && hasReq.status === 200 && hasReq.responseText) {
+        var hasReqBeers = JSON.parse(hasReq.responseText).beers;
+        var coreBeers = ['IPA', 'Pilsner', 'Gose'];
+
+        var hasReqBeersSorted = coreBeers.concat(hasReqBeers);
+
+        try {
+          hasReqBeersSorted = hasReqBeersSorted.filter(function(item, pos) {
+            return hasReqBeersSorted.indexOf(item) == pos;
+          })
+        } catch (e) {
+          console.log('de-dup error', e)
+        }
+
+        for(var i = 0; i < hasReqBeersSorted.length; i++) {
+          var beerOption = document.createElement('option');
+          beerOption.innerHTML = hasReqBeersSorted[i];
+          document.getElementById('type-of-beer').appendChild(beerOption);
+        }
+      } else if (hasReq.readyState === 4) {
+        console.error('Recieved a ' + hasReq.status + ' from the historical archive service');
+      }
+    };
+
+    // Open and send the request to Untappd
+    hasReq.open('GET', 'https://s3.amazonaws.com/five-boroughs-data-stubs/beer-archive.json', true);
+    hasReq.send();
+  </script>
 
 </body>
 
