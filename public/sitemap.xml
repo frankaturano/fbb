@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>http://fiveboroughs.com/</loc>
+      <loc>https://fiveboroughs.com/</loc>
    </url>
 
    <url>
-      <loc>http://fiveboroughs.com/beer/</loc>
+      <loc>https://fiveboroughs.com/beer/</loc>
    </url>
 
    <url>
-      <loc>http://fiveboroughs.com/quality/</loc>
+      <loc>https://fiveboroughs.com/quality/</loc>
    </url>
 
    <url>
-      <loc>http://fiveboroughs.com/story/</loc>
+      <loc>https://fiveboroughs.com/story/</loc>
    </url>
 
    <url>
-      <loc>http://fiveboroughs.com/culture/</loc>
+      <loc>https://fiveboroughs.com/culture/</loc>
    </url>
 
    <url>
-      <loc>http://fiveboroughs.com/visit/</loc>
+      <loc>https://fiveboroughs.com/visit/</loc>
    </url>
 
 </urlset>
