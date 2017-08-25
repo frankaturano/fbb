@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <title>Five Boroughs Brewing Co. | Beer</title>
   <meta name="description" content="Five Boroughs Brewing Co. makes craft beer for New York City in our Sunset Park, Brooklyn brewery.">
-  <meta property="og:image" content="//fiveboroughs.com/images/explore-three.jpg" />
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../fonts/stylesheet.css" type="text/css" rel="stylesheet">
   <link href="../styles/reset.css" type="text/css" rel="stylesheet">
   <link href="../styles/stylesheet.css" type="text/css" rel="stylesheet">
-  <link href="../styles/visit-page.css" type="text/css" rel="stylesheet">
+  <link href="../styles/beer-page.css" type="text/css" rel="stylesheet">
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1512467205477155'); // Insert your pixel ID here.
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1512467205477155&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
 </head>
 
-<body class="visit-page locked">
+<!-- @NOTE: body start off locked, and gets unlocked by the age gate -->
+<body class="beer-page locked">
   <!-- WELCOME -->
   <section class="welcome">
     <div class="absolute-center">
@@ -32,9 +47,6 @@
   </section>
   <script src="../scripts/cookies.js"></script>
   <!-- Navigation -->
-  <div class="visit-navigation-placeholder">
-    <!-- Used to hold the beer-navigator's place on the body when it goes sticky -->
-  </div>
   <nav>
     <div class="limit-container">
       <a href="../"><span class="logo">Five Boroughs Brewing Co.</span></a>
@@ -65,18 +77,141 @@
       </ul>
     </div>
   </nav>
-  <!-- Main -->
-  <div class="limit-container">
-    <h1>
-      Details on the Five Boroughs Brewing Co. lineup soon. <a target="_blank" style="color: #00a8c5; text-decoration: none" href="https://fiveboroughs.us13.list-manage.com/subscribe/post?u=375652e7c2ca218f2dd8b2255&id=dcef4f7882">Sign up</a> to find out more on our product launches, and don't forget to keep an eye on us on <a target="_blank" style="color: #00a8c5; text-decoration: none" href="https://untappd.com/FiveBoroughsBrewingCo">Untappd</a>, too.
-    </h1>
+  <div class="beer-navigator-placeholder">
+    <!-- Used to hold the beer-navigator's place on the body when it goes sticky -->
   </div>
-  <!--REMOVE INLINE MARGIN STYLE LATER-->
-  <img class="visit-hero" src="../images/beer-hero-placeholder.jpg" style="margin:88px 0 0 0; display: block" />
-  <div class="come-meet-us limit-container">
-    <h3>FIVE BOROUGHS IS BREWED FOR YOUR NYC</h3>
-    <img style="width:100%;height:auto;max-width:180px;" src="../images/united-logo-dark.png" />
+  <div class="beer-navigator">
+    <ul>
+      <li>IPA</li>
+      <li>Pilsner</li>
+      <li>Gose</li>
+      <li>Hoppy Lager</li>
+    </ul>
   </div>
+  <!-- Beer Listing -->
+  <section class="beers-list">
+    <div class="limit-container">
+      <!-- IPA -->
+      <div class="beers-list__beer">
+        <div class="beer-details">
+          <div class="beer-details--type">Core&mdash;Year Round</div>
+          <div class="beer-details--name">IPA</div>
+          <div class="beer-details--dek">Our IPA is a modern take on the West Coast original. We add the majority of the hops late in the brewing process resulting in a huge hop aroma of citrus fruits balanced with herbs and pine. Flaked wheat and Optic malt add some complexity and body, but this beer is all about hop aroma and bitterness.</div>
+          <div class="beer-details__meta">
+            <div class="beer-details--overview">
+              <div class="overview-label">Malt</div>
+              <ul>
+                <li>2-ROW, OPTIC MALT, WHEAT MALT, 10L</li>
+              </ul>
+            </div>
+            <div class="beer-details--ingregients">
+              <div class="ingregients-label">HOPS</div>
+              <ul>
+                <li>Citra, CTZ, Centennial, Cascade, Chinook, Horizon</li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="deatils--bubble" style="background:#6cac43">ABV<br />6.8%</div>
+            <div class="deatils--bubble">IBU<br />62</div>
+            <div class="deatils--bubble">SRM<br />4</div>
+          </div>
+        </div>
+        <div class="beer-image">
+          <img src="../images/IPA.svg" />
+        </div>
+      </div>
+
+      <!-- PILSNER -->
+      <div class="beers-list__beer">
+        <div class="beer-details">
+          <div class="beer-details--type">Core&mdash;Year Round</div>
+          <div class="beer-details--name">Pilsner</div>
+          <div class="beer-details--dek">Inspired by Czech tradition, our Pilsner is light in color and body with a clean, bitter finish. Czech Saaz hops impart soft floral and grassy aromas. This style is deceptively difficult to brew, and we’ve worked hard to perfect our take on this unassuming lager.</div>
+          <div class="beer-details__meta">
+            <div class="beer-details--overview">
+              <div class="overview-label">Malt</div>
+              <ul>
+                <li>PILSNER</li>
+              </ul>
+            </div>
+            <div class="beer-details--ingregients">
+              <div class="ingregients-label">HOPS</div>
+              <ul>
+                <li>Saaz, Hallertau</li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="deatils--bubble" style="background:#f9a01b">ABV<br />5%</div>
+          <div class="deatils--bubble">IBU<br />40</div>
+          <div class="deatils--bubble">SRM<br />3</div>
+        </div>
+        <div class="beer-image">
+          <img src="../images/PILSNER.svg" />
+        </div>
+      </div>
+
+      <!-- GOSE -->
+      <div class="beers-list__beer">
+        <div class="beer-details">
+          <div class="beer-details--type">Core&mdash;Year Round</div>
+          <div class="beer-details--name">Gose</div>
+          <div class="beer-details--dek">An incredibly drinkable low-ABV beer, our Gose is the perfect balance of acidic sourness and saltiness. Fermented cool with our house ale yeast, this beer finishes super clean with little to no bitterness.</div>
+          <div class="beer-details__meta">
+            <div class="beer-details--overview">
+              <div class="overview-label">Malt</div>
+              <ul>
+                <li>PILSNER, WHEAT MALT</li>
+              </ul>
+            </div>
+            <div class="beer-details--ingregients">
+              <div class="ingregients-label">HOPS</div>
+              <ul>
+                <li>HORIZON</li>
+              </ul>
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="deatils--bubble" style="background:#bb6cac">ABV<br />4.0%</div>
+          <div class="deatils--bubble">IBU<br />8</div>
+          <div class="deatils--bubble">SRM<br />2</div>
+        </div>
+        <div class="beer-image">
+          <img src="../images/GOSE.svg" />
+        </div>
+      </div>
+
+      <!-- HOPPY LAGER -->
+      <div class="beers-list__beer">
+        <div class="beer-details">
+          <div class="beer-details--type">Core&mdash;Year Round</div>
+          <div class="beer-details--name">Hoppy Lager</div>
+          <div class="beer-details--dek">At a higher ABV, our Hoppy Lager is
+a departure from the more traditional lagers we brew. We use a light grain bill and our clean-fermenting house lager yeast to create the perfect base to showcase large additions of Motueka and Centennial hops. This gives the beer an aroma of tropical fruit, lime zest, grapefruit, and light pine.</div>
+          <div class="beer-details__meta">
+            <div class="beer-details--overview">
+              <div class="overview-label">Malt</div>
+              <ul>
+                <li>2-ROW, WHEAT MALT<li>
+              </ul>
+            </div>
+            <div class="beer-details--ingregients">
+              <div class="ingregients-label">HOPS</div>
+              <ul>
+                <li>Motueka, Centennial, Horizon</li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="deatils--bubble">ABV<br />6.0%</div>
+            <div class="deatils--bubble">IBU<br />45</div>
+            <div class="deatils--bubble">SRM<br />3</div>
+          </div>
+        </div>
+        <div class="beer-image">
+          <img src="../images/HOPPY-LAGER.svg" />
+        </div>
+      </div>
+    </div>
   </section>
   <!-- Footer -->
   <footer>
@@ -124,14 +259,15 @@
             </a>
           </div>
           <div class="contact--hours">
-             <div class="label">Taproom Hours</div>
-             <div class="link">Opening Soon</div>
-            <!-- <div class="link">Monday&mdash;Thursday</div>
-            <div class="link">11am&mdash;10pm</div>
-            <div class="link">Friday&mdash;Saturday</div>
-            <div class="link">11am&mdash;11pm</div>
+            <div class="label">Taproom Hours</div>
+            <div class="link">Thursday</div>
+            <div class="link">4pm&mdash;10pm</div>
+            <div class="link">Friday</div>
+            <div class="link">4pm&mdash;11pm</div>
+            <div class="link">Saturday</div>
+            <div class="link">Noon&mdash;11pm</div>
             <div class="link">Sunday</div>
-            <div class="link">11am&mdash;8pm</div> -->
+            <div class="link">Noon&mdash;10pm</div>
           </div>
           <div class="check-twitter link link--twitter"><a href="https://twitter.com/fiveboroughs" target="_blank">Check Twitter For Holiday Hours and Special Event Closings</a></div>
         </div>
@@ -148,7 +284,7 @@
 
   <script src="../scripts/smoothscroll.js"></script>
   <script src="../scripts/main.js"></script>
-  <script src="../scripts/visit-page.js"></script>
+  <script src="../scripts/beer-page.js"></script>
 </body>
 
 </html>

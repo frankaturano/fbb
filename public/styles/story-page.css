@@ -74,23 +74,25 @@
   text-transform: uppercase;
   line-height: 30px;
 }
-.the-team__member:nth-child(1) .member--name{
+.the-team__member:nth-child(1) .member--name,
+.the-team__member:nth-child(6) .member--name{
   color:#00a8c5;
 }
-.the-team__member:nth-child(2) .member--name{
+.the-team__member:nth-child(2) .member--name,
+.the-team__member:nth-child(7) .member--name{
   color:#6cac43;
 }
-.the-team__member:nth-child(3) .member--name{
+.the-team__member:nth-child(3) .member--name,
+.the-team__member:nth-child(8) .member--name{
   color:#ef4044;
 }
-.the-team__member:nth-child(4) .member--name{
+.the-team__member:nth-child(4) .member--name,
+.the-team__member:nth-child(9) .member--name{
   color:#f9a01b;
 }
-.the-team__member:nth-child(5) .member--name{
+.the-team__member:nth-child(5) .member--name,
+.the-team__member:nth-child(10) .member--name{
   color:#bb6cac;
-}
-.the-team__member:nth-child(6) .member--name{
-  color:#790000;
 }
 .story-page p {
   font-size: 20px;

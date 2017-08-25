@@ -50,7 +50,7 @@ p.h2-dek{
 .visit-page .taproom-hours,
 .visit-page .on-tap{
   max-width: 940px;
-  margin: 0 auto;
+  margin: 0 auto 88px auto;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -77,33 +77,30 @@ p.h2-dek{
   display: table-cell;
 }
 .beer--dek{
-  width: 50%;
   display: table-cell;
 }
 .on-tap__beer--label {
   display: table-cell;
   vertical-align: top;
-  width: 50%;
   text-align: right;
-  padding-left: 20px;
+  padding-left: 30px;
+  min-width: 100px;
 }
-.on-tap__beer:nth-child(1) .beer--name{
-  color:#00a8c5;
+
+.beer--name.beer--ipa {
+  color: #6cac43;
 }
-.on-tap__beer:nth-child(2) .beer--name{
-  color:#6cac43;
+
+.beer--name.beer--pilsner {
+  color: #f9a01b;
 }
-.on-tap__beer:nth-child(3) .beer--name{
-  color:#ef4044;
+
+.beer--name.beer--gose {
+  color: #bb6cac;
 }
-.on-tap__beer:nth-child(4) .beer--name{
-  color:#f9a01b;
-}
-.on-tap__beer:nth-child(5) .beer--name{
-  color:#bb6cac;
-}
-.on-tap__beer:nth-child(6) .beer--name{
-  color:#790000;
+
+.beer--name.beer--hoppylager {
+  color: #717073;
 }
 
 .taproom-hours__day {

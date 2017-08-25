@@ -11,6 +11,21 @@
   <link href="../styles/reset.css" type="text/css" rel="stylesheet">
   <link href="../styles/stylesheet.css" type="text/css" rel="stylesheet">
   <link href="../styles/quality-page.css" type="text/css" rel="stylesheet">
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1512467205477155'); // Insert your pixel ID here.
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1512467205477155&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body class="quality-page locked">
@@ -140,12 +155,8 @@
       </div>
       <label>Type Of Beer:</label>
       <div class="select-custom">
-        <select>
-          <option>IPA</option>
-          <option>PILSNER</option>
-          <option>HOPPY LAGER</option>
-          <option>GOSE</option>
-          <option>SUNSET SWING SPRING ALE</option>
+        <select id="type-of-beer">
+
         </select>
       </div>
 
@@ -230,14 +241,15 @@
             </a>
           </div>
           <div class="contact--hours">
-             <div class="label">Taproom Hours</div>
-             <div class="link">Opening Soon</div>
-            <!-- <div class="link">Monday&mdash;Thursday</div>
-            <div class="link">11am&mdash;10pm</div>
-            <div class="link">Friday&mdash;Saturday</div>
-            <div class="link">11am&mdash;11pm</div>
+            <div class="label">Taproom Hours</div>
+            <div class="link">Thursday</div>
+            <div class="link">4pm&mdash;10pm</div>
+            <div class="link">Friday</div>
+            <div class="link">4pm&mdash;11pm</div>
+            <div class="link">Saturday</div>
+            <div class="link">Noon&mdash;11pm</div>
             <div class="link">Sunday</div>
-            <div class="link">11am&mdash;8pm</div> -->
+            <div class="link">Noon&mdash;10pm</div>
           </div>
           <div class="check-twitter link link--twitter"><a href="https://twitter.com/fiveboroughs" target="_blank">Check Twitter For Holiday Hours and Special Event Closings</a></div>
         </div>
@@ -424,6 +436,46 @@
 
   </script>
 
+  <script>
+    // Create a request to get menu items from the historical archive service
+    var hasReq = new XMLHttpRequest();
+
+    // Handle the request when it comes through, and render the menu
+    hasReq.onreadystatechange = function () {
+      if (hasReq.readyState === 4 && hasReq.status === 200 && hasReq.responseText) {
+        var hasReqBeers = JSON.parse(hasReq.responseText).beers;
+        var coreBeers = ['IPA', 'Pilsner', 'Gose', 'Hoppy Lager'];
+
+        var hasReqBeersSorted = coreBeers.concat(hasReqBeers);
+
+        try {
+          hasReqBeersSorted = hasReqBeersSorted.filter(function(item, pos) {
+            return hasReqBeersSorted.indexOf(item) == pos;
+          })
+        } catch (e) {
+          console.log('de-dup error', e)
+        }
+
+        for(var i = 0; i < hasReqBeersSorted.length; i++) {
+          var beerOption = document.createElement('option');
+          beerOption.innerHTML = hasReqBeersSorted[i];
+          document.getElementById('type-of-beer').appendChild(beerOption);
+        }
+      } else if (hasReq.readyState === 4) {
+        console.error('Recieved a ' + hasReq.status + ' from the historical archive service');
+        var coreBeers = ['IPA', 'Pilsner', 'Gose', 'Hoppy Lager'];
+        for(var i = 0; i < coreBeers.length; i++) {
+          var beerOption = document.createElement('option');
+          beerOption.innerHTML = coreBeers[i];
+          document.getElementById('type-of-beer').appendChild(beerOption);
+        }
+      }
+    };
+
+    // Open and send the request to the historical archive service
+    hasReq.open('GET', 'https://d1sseepmmm90kn.cloudfront.net/beer-archive.json', true);
+    hasReq.send();
+  </script>
 
 </body>
 
