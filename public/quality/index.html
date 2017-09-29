@@ -11,6 +11,7 @@
   <link href="../styles/reset.css" type="text/css" rel="stylesheet">
   <link href="../styles/stylesheet.css" type="text/css" rel="stylesheet">
   <link href="../styles/quality-page.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
   <!-- Facebook Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -148,10 +149,10 @@
 
     <div class="step step-four limit-container" data-dek="Consider us beer detectives.">
       <label>Date Observed:</label>
-      <input type="date" max="9999-12-31" />
+      <input class="datepicker" type="date" max="9999-12-31" />
       <div class="date-packaged-grouping">
         <label>Date Packaged:</label>
-        <input type="date" max="9999-12-31" />
+        <input class="datepicker" type="date" max="9999-12-31" />
       </div>
       <label>Type Of Beer:</label>
       <div class="select-custom">
@@ -475,6 +476,12 @@
     // Open and send the request to the historical archive service
     hasReq.open('GET', 'https://d1sseepmmm90kn.cloudfront.net/beer-archive.json', true);
     hasReq.send();
+  </script>
+  <script src="https://unpkg.com/flatpickr"></script>
+  <script>
+    flatpickr(".datepicker", {
+      altInput: true
+    });
   </script>
 
 </body>

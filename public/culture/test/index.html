@@ -54,8 +54,9 @@
     margin-bottom: 80px;
   }
   .inline-image{
+    width: 100% !important;
     margin-top: 22px;
-    margin-bottom: 44px;
+    /*margin-bottom: 44px;*/
   }
   .visit-page h2{
     margin-top: 4px;
@@ -86,6 +87,11 @@
   }
   .blog-body a:hover::after {
     width: 100%;
+  }
+  .visit-hero {
+    width: 100% !important;
+    margin:50px 0 44px 0;
+    display: block;
   }
   @media (max-width: 850px){
     .visit-page h2 {
@@ -156,23 +162,16 @@
   </nav>
   <!-- Main -->
   <div class="limit-container">
-    <h1>
-      The Five Boroughs Taproom Is Our Brewery's Beating Heart
+    <h1 class="blog-title">
+      {title}
     </h1>
-    <h2>
-      And that was the idea all along
+    <h2 class="blog-description">
+      {description}
     </h2>
   </div>
   <!--REMOVE INLINE MARGIN STYLE LATER-->
-  <img class="visit-hero" src="images/five-boroughs-brewing-co-taproom-header.jpg" style="margin:50px 0 44px 0; display: block" />
+  <span class="blog-hero">{hero}</span>
   <div class="limit-container blog-body">
-    <p>Even when the Five Boroughs Brewing Co. taproom was just a fuzzy idea in our heads, we knew exactly what we wanted it to be. Maybe with all of the construction dust swirling around for more than a year, or the old railroad tracks that we found running through the space before we broke ground, we couldn&rsquo;t exactly picture what it would look like all finished. But we always knew that the Five Boroughs taproom would be the beating heart of a brewery built for New York City.</p>
-    <p>Located at the front of the brewery on 47<sup>th</sup> Street in Sunset Park, our 2,500 square-foot taproom is a place where you can really unwind. We&rsquo;re<a href="https://www.fiveboroughs.com/visit/"> open Thursday through Sunday</a>, and there&rsquo;s a ton of space to just chill out, whether you&rsquo;re with friends or a great book. At the taproom, you can get the <a href="https://www.fiveboroughs.com/beer/">core four Five Boroughs beers</a>&mdash;Pilsner, IPA, Gose, and Hoppy Lager&mdash;that are also available in bars throughout the city. What we&rsquo;re really excited about, though, and what we&rsquo;ve always envisioned would be there, are those specialty taproom-only beers, which really make the trip to Sunset Park extra worth it.</p>
-    <img class="inline-image" src="images/five-boroughs-brewing-co-taproom-1.jpg" />
-    <p>We pour a whole range of smaller-batch and seasonal brews at the taproom, and showcase lots of different styles. This summer, those who visited us tried our Helles, Mango Saison, Mosaic Pale Ale, Double IPA, taproom-favorite Raspberry Gose, and more. And you better believe that there&rsquo;s a lot of great stuff coming off the lines for fall&mdash;we&rsquo;re already pouring the newest member in our fruited gose series, <a href="https://www.instagram.com/p/BY1I7MbDXK7/?taken-by=fiveboroughsbrewing">Pineapple Mango Gose</a>, and soon we&rsquo;ll be featuring collabs with local breweries, plus a new Festbier, Robust Porter, and the return of the Helles.</p>
-    <p>The thing is, though, that it&rsquo;s not just about coming to the taproom and <em>drinking</em> the specialty beers (although, admittedly, that&rsquo;s a big part of it&mdash;so make sure you grab a flight!). The taproom is really where our motto &ldquo;united by beer&rdquo; truly comes alive. We think of the taproom as a proving ground for our recipes: We&rsquo;re a brewery here to serve all of New York City, and we can&rsquo;t do our job perfectly unless we know exactly what our customers are loving and what they aren&rsquo;t. Every conversation you have with our staff behind the bar, whether it&rsquo;s Ryan, Kim, <a href="https://www.instagram.com/p/BYMN8OojaTM/?taken-by=fiveboroughsbrewing">James</a>, or anyone else, helps us know how to brew beer that truly reflects the tastes of New Yorkers.</p>
-    <img class="inline-image" src="images/five-boroughs-brewing-co-taproom-2.jpg" />
-    <p>That said, isn&rsquo;t it time you swung by our taproom? There&rsquo;s no time like fall in New York City, so come to Sunset Park, grab a flight, and tell us what you want to see in a beer made for you. That, for us, is a dream come true.</p>
   </div>
   </section>
   <!-- Footer -->
@@ -243,6 +242,67 @@
       </div>
     </section>
   </footer>
+
+  <script src="./dust-full.min.js"></script>
+
+  <script type="text/dust" id="title">{title|s}</script>
+  <script type="text/dust" id="description">{description|s}</script>
+  <script type="text/dust" id="hero">{hero|s}</script>
+  <script type="text/dust" id="body">{body|s}</script>
+
+  <script type="text/javascript">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://vqt4pzjbk0.execute-api.us-east-1.amazonaws.com/prod/postService?guid=2');
+    xhr.send(null);
+
+    xhr.onreadystatechange = function () {
+      var DONE = 4; // readyState 4 means the request is done.
+      var OK = 200; // status 200 is a successful return.
+      if (xhr.readyState === DONE) {
+        if (xhr.status === OK) {
+
+          // TITLE
+          var titleSrc = document.getElementById('title').textContent;
+          var titleCompiled = dust.compile(titleSrc, 'title');
+          dust.loadSource(titleCompiled);
+          dust.render('title', { title: JSON.parse(xhr.responseText).Item.content.title }, function(err, out) {
+            document.querySelector('.blog-title').innerHTML = out;
+          });
+
+          // DESCRIPTION
+          var descriptionSrc = document.getElementById('description').textContent;
+          var descriptionCompiled = dust.compile(descriptionSrc, 'description');
+          dust.loadSource(descriptionCompiled);
+          dust.render('description', { description: JSON.parse(xhr.responseText).Item.content.description }, function(err, out) {
+            document.querySelector('.blog-description').innerHTML = out;
+          });
+
+          // HERO
+          var heroSrc = document.getElementById('hero').textContent;
+          var heroCompiled = dust.compile(heroSrc, 'hero');
+          dust.loadSource(heroCompiled);
+          dust.render('hero', { hero: JSON.parse(xhr.responseText).Item.content.hero }, function(err, out) {
+            document.querySelector('.blog-hero').innerHTML = out;
+            document.querySelector('.blog-hero').querySelector('img').classList.add('visit-hero');
+          });
+
+          // BODY
+          var bodySrc = document.getElementById('body').textContent;
+          var bodyCompiled = dust.compile(bodySrc, 'body');
+          dust.loadSource(bodyCompiled);
+          dust.render('body', { body: JSON.parse(xhr.responseText).Item.content.body }, function(err, out) {
+            document.querySelector('.blog-body').innerHTML = out;
+            document.querySelector('.blog-body').querySelectorAll('img').forEach(img => {
+              img.classList.add('inline-image')
+            })
+          });
+
+        } else {
+          console.log('Error: ' + xhr.status); // An error occurred during the request.
+        }
+      }
+    };
+  </script>
 
   <script src="../../scripts/smoothscroll.js"></script>
   <script src="../../scripts/main.js"></script>

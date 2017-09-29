@@ -27,6 +27,18 @@
   /></noscript>
   <!-- DO NOT MODIFY -->
   <!-- End Facebook Pixel Code -->
+
+  <!-- EDITOR CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.5/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.5/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+  <style>
+  .promo__image p {
+    max-width: 100%;
+    padding: 0;
+  }
+  </style>
 </head>
 
 <!-- @NOTE: body start off locked, and gets unlocked by the age gate -->
@@ -217,6 +229,20 @@
   <script src="./scripts/main.js"></script>
   <!-- GOOGLE SOCIAL ICONS SCHEMA -->
   <script type="application/ld+json">{"@context" : "http://schema.org", "@type" : "Organization", "name" : "Five Boroughs Brewing Co.", "url" : "http://www.fiveboroughs.com/", "sameAs" : [ "https://www.facebook.com/fiveboroughsbrewing/", "https://twitter.com/fiveboroughs", "https://www.instagram.com/fiveboroughsbrewing/"]}</script>
+
+
+  <!-- EDITOR JS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.5/js/froala_editor.pkgd.min.js"></script>
+  <script>
+  if (window.location.search === "?edit=true") {
+    $('.promo__text, .promo__image').froalaEditor({
+      toolbarInline: true
+    });
+  }
+  </script>
 </body>
 
 </html>
