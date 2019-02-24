@@ -182,7 +182,7 @@
         <label>Email:</label>
         <input type="email" required="true" />
         <label>Comments:</label>
-        <textarea></textarea>
+        <textarea required="true"></textarea>
         <label>Can we reach out?</label>
         <span class="reach-out-yes chosen">YES</span> <span class="reach-out-no">NO</span>
         <input type="submit" value="Submit" />
@@ -400,7 +400,7 @@
         'Type Of Beer' : document.querySelector('.step-four select').options[document.querySelector('.step-four select').selectedIndex].value,
         'Name' : document.querySelectorAll('.step-five input')[0].value,
         'Email' : document.querySelectorAll('.step-five input')[1].value,
-        'Comments' : document.querySelectorAll('.step-five input')[2].value,
+        'Comments' : document.querySelector('.step-five textarea').value,
         'Can We Reach Out?' : document.querySelector('.reach-out-yes').classList.contains('chosen') ? 'YES' : 'NO'
       };
 
