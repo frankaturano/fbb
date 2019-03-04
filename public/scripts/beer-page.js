@@ -8,6 +8,7 @@
 
 // First, let's grab a couple elements we need to work with
 var navigation = document.querySelector('nav');
+var disclaimer = document.querySelector('.beer-disclaimer');
 var beerNavigator = document.querySelector('.beer-navigator');
 var beerNavigatorPlaceholder = document.querySelector('.beer-navigator-placeholder');
 var beerNavigationLinks = document.querySelectorAll('.beer-navigator ul li');
@@ -25,11 +26,11 @@ window.beerVisibility = {};
 
 // Then, let's define a scroll function that handles all this fanciness
 var scroll = function(){
-  if(navigation && beerNavigator && beerNavigatorPlaceholder && beerNavigationLinks && beers){
+  if(navigation && beerNavigator && disclaimer && beerNavigatorPlaceholder && beerNavigationLinks && beers){
 
     // We will define a point which recalculates on scroll for when to stick the nav
-    var stickPoint = navigation.getBoundingClientRect().bottom +
-      parseInt(window.getComputedStyle(navigation).getPropertyValue("margin-bottom"));
+    var stickPoint = disclaimer.getBoundingClientRect().bottom +
+      parseInt(window.getComputedStyle(disclaimer).getPropertyValue("margin-bottom"));
 
     // This placeholder keeps the page from jumping around
     var placeholderSize = beerNavigator.offsetHeight +
