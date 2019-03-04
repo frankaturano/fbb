@@ -18,6 +18,12 @@
 .beer-page nav.active{
   margin: 0;
 }
+.beer-page .beer-disclaimer {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
 /*Beer Navigator*/
 .beer-navigator {
   border-top: 1px solid #000;
@@ -100,13 +106,14 @@
 .beers-list__beer:nth-child(4) .beer-details--name,
 .beer-navigator ul li:nth-child(4):hover,
 .beer-navigator ul li:nth-child(4).active{
-  color:#717073;
+  color:#00a8c5;
 }
-/*.beers-list__beer:nth-child(5) .beer-details--name,
+.beers-list__beer:nth-child(5) .beer-details--name,
 .beer-navigator ul li:nth-child(5):hover,
 .beer-navigator ul li:nth-child(5).active{
-  color:#bb6cac;
+  color:#ff6600;
 }
+/*
 .beers-list__beer:nth-child(6) .beer-details--name,
 .beer-navigator ul li:nth-child(6):hover,
 .beer-navigator ul li:nth-child(6).active{
