@@ -83,6 +83,34 @@ toTop.addEventListener('click', function(){
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 });
 
+toTop.addEventListener('focus', function(e) {
+  if (this.keydownEventSet) {
+    return;
+  }
+  this.keydownEventSet = true;
+
+  this.addEventListener('keydown', function(e) {
+    if (e.keyCode == 13) {
+      if (document.querySelector('[tabindex="6"]')) {
+        document.querySelector('[tabindex="6"]').focus();
+      } else {
+        document.querySelector('[tabindex="0"]').focus();
+      }
+      this.click();
+    }
+  });
+});
+
+var navItems = document.querySelectorAll('nav ul li');
+for (var i = 0; i < navItems.length; i++) {
+  navItems[i].addEventListener('click', function() {
+    if (this.querySelector('a')) {
+      this.querySelector('a').focus();
+      this.querySelector('a').click();
+    }
+  })
+}
+
 // Elements involved
 var downArrow = document.querySelector('.down-arrow');
 var promoSection = document.querySelector('.promo');
@@ -134,6 +162,42 @@ if(ageGate){
   // ON NO, let's really make that kids thing stand out for a second
   ageGateNo.addEventListener('click', function(){
     ageGateDisc.style.color = '#fff';
+  });
+
+  // Age Gate Accessibilitty Handling
+  ageGateNo.addEventListener('focus', function(e) {
+    if (this.keydownEventSet) {
+      return;
+    }
+    this.keydownEventSet = true;
+
+    e.target.addEventListener('keydown', function(e) {
+      if (document.querySelector('body').classList.contains('locked')) {
+        e.preventDefault();
+        e.target.addEventListener('keyup', function() {
+          ageGateYes.setAttribute('aria-label', 'Yes. You must be of legal drinking age to join us. Select this option to continue.');
+          ageGateYes.focus();
+        });
+      }
+    });
+  });
+
+  ageGateYes.addEventListener('focus', function(e) {
+    if (this.keydownEventSet) {
+      return;
+    }
+    this.keydownEventSet = true;
+
+    this.addEventListener('keydown', function(e) {
+      if (e.keyCode == 13) {
+        ageGateYes.click();
+        var tabindex = Number(e.target.getAttribute('tabindex'));
+        document.querySelector('[tabindex="'+ 6 +'"]').focus();
+        for (var i = 1; i < 6; i ++) {
+          document.querySelector('[tabindex="'+ i +'"]').setAttribute('tabindex', '-1');
+        }
+      }
+    });
   });
 
   // Finally, if the user refreshes, but already said yes, let's unlock the page

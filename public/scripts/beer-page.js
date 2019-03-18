@@ -116,6 +116,24 @@ for(var i = 0; i < beerNavigationLinks.length; i++){
       }
     }
   })
+  beerLink.addEventListener('focus', function() {
+    if (this.keydownEventSet) {
+      return;
+    }
+    this.keydownEventSet = true;
+
+    this.addEventListener('keydown', function(e) {
+      if (e.keyCode == 13) {
+        for(var i = 0; i < beers.length; i++){
+          var beer = beers[i];
+          var name = beer.querySelector('.beer-details--name');
+          if(name.innerHTML == this.innerHTML) {
+            name.focus();
+          }
+        }
+      }
+    });
+  })
 }
 
 /* ... END OF SCOPE ... */

@@ -1005,3 +1005,11 @@ a[href^="tel"] {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+
+/*Accessibilitty*/
+/* *:focus {
+  outline: none;
+} */
+a:focus .logo {
+  outline: blue;
+}
