@@ -21,11 +21,11 @@ window.getCookie = function(cname) {
   return "";
 };
 
-// if(getCookie('ageGateRemembered') == "true"){
-//   var welcome = document.querySelector('.welcome');
-//   // We basically check the scroll position as an indicator... idk it works
-//   document.body.classList.remove('locked');
-//   document.ontouchmove = function(e){ return true; }
-//   // Let's hide the age gate too! duh...
-//   welcome.style.display = "none";
-// }
+if(getCookie('ageGateRemembered') == "true"){
+  var welcome = document.querySelector('.welcome');
+  // We basically check the scroll position as an indicator... idk it works
+  document.body.classList.remove('locked');
+  document.ontouchmove = function(e){ return true; }
+  // Let's hide the age gate too! duh...
+  welcome.style.display = "none";
+}
