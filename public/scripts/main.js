@@ -117,15 +117,15 @@ var ageGate = document.querySelector('.age__gate'),
     heroSection = document.querySelector('.hero');
 
 if(ageGate){
-  // Prevent Scroling On IOS/Touch Devices
-  document.ontouchmove = function(e){ e.preventDefault(); }
+  // Prevent Scrolling On IOS/Touch Devices and Beyondddddd
+  bodyScrollLock.disableBodyScroll(document.body);
   // ON YES, let's scroll the user down and remove the adgate
   ageGateYes.addEventListener('click', function(){
     welcomeSectionInner.style.opacity = "0";
     welcomeSection.style.height = "0px";
     setTimeout(function(){
       document.body.classList.remove('locked');
-      document.ontouchmove = function(e){ return true; }
+      bodyScrollLock.enableBodyScroll(document.body);
     }, 700);
     // Set a cookie to be remembered for next time!
     setCookie("ageGateRemembered", "true", 365);
@@ -161,7 +161,7 @@ if(ageGate){
     if(ageGate.getBoundingClientRect().top <= 0) {
       // We basically check the scroll position as an indicator... idk it works
       document.body.classList.remove('locked');
-      document.ontouchmove = function(e){ return true; }
+      bodyScrollLock.enableBodyScroll(document.body);
       // Let's hide the age gate too! duh...
       ageGate.style.display = "none";
     }
