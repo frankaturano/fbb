@@ -8,7 +8,7 @@
 
 // First, let's grab a couple elements we need to work with
 var navigation = document.querySelector('nav');
-var disclaimer = document.querySelector('.beer-disclaimer');
+var disclaimer = document.querySelector('.beer-disclaimer h1');
 var beerNavigator = document.querySelector('.beer-navigator');
 var beerNavigatorPlaceholder = document.querySelector('.beer-navigator-placeholder');
 var beerNavigationLinks = document.querySelectorAll('.beer-navigator ul li');

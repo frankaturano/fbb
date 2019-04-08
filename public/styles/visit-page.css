@@ -100,7 +100,11 @@ p.h2-dek{
 }
 
 .beer--name.beer--hoppylager {
-  color: #717073;
+  color: #00a8c5;
+}
+
+.beer--name.beer--tinyjuicyipa {
+  color: #ff6600;
 }
 
 .taproom-hours__day {

@@ -13,16 +13,27 @@
   margin: 22px 0;
 }
 .beer-page nav {
-  margin: 80px 0 48px 0;
+  margin: 80px 0 80px 0;
 }
 .beer-page nav.active{
   margin: 0;
 }
-.beer-page .beer-disclaimer {
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 30px;
-  font-style: italic;
+.beer-page .beer-disclaimer h1{
+  font-size: 54px;
+  line-height: 60px;
+  margin-bottom: 60px;
+}
+@media(max-width: 850px){
+  .beer-page .beer-disclaimer h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+@media(max-width: 650px){
+  .beer-page .beer-disclaimer h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
 }
 /*Beer Navigator*/
 .beer-navigator {
