@@ -116,6 +116,11 @@ for(var i = 0; i < beerNavigationLinks.length; i++){
       }
     }
   })
+  beerLink.addEventListener('keydown', function(e) {
+    if (e.keyCode === 13) {
+      this.click()
+    }
+  })
 }
 
 /* ... END OF SCOPE ... */

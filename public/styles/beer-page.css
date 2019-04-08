@@ -101,28 +101,38 @@
 }
 .beers-list__beer:nth-child(1) .beer-details--name,
 .beer-navigator ul li:nth-child(1):hover,
+.beer-navigator ul li:nth-child(1):focus,
 .beer-navigator ul li:nth-child(1).active{
   color:#6cac43;
+  outline: none;
 }
 .beers-list__beer:nth-child(2) .beer-details--name,
 .beer-navigator ul li:nth-child(2):hover,
+.beer-navigator ul li:nth-child(2):focus,
 .beer-navigator ul li:nth-child(2).active{
   color:#f9a01b;
+  outline: none;
 }
 .beers-list__beer:nth-child(3) .beer-details--name,
 .beer-navigator ul li:nth-child(3):hover,
+.beer-navigator ul li:nth-child(3):focus,
 .beer-navigator ul li:nth-child(3).active{
   color:#bb6cac;
+  outline: none;
 }
 .beers-list__beer:nth-child(4) .beer-details--name,
 .beer-navigator ul li:nth-child(4):hover,
+.beer-navigator ul li:nth-child(4):focus,
 .beer-navigator ul li:nth-child(4).active{
   color:#00a8c5;
+  outline: none;
 }
 .beers-list__beer:nth-child(5) .beer-details--name,
 .beer-navigator ul li:nth-child(5):hover,
+.beer-navigator ul li:nth-child(5):focus,
 .beer-navigator ul li:nth-child(5).active{
   color:#ff6600;
+  outline: none;
 }
 /*
 .beers-list__beer:nth-child(6) .beer-details--name,

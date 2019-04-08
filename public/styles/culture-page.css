@@ -51,6 +51,9 @@
   text-decoration: none;
   color: inherit;
 }
+.blog-item:focus {
+  outline: none;
+}
 .blog-item__image {
   width: 100%;
   background: #eee;
@@ -73,6 +76,10 @@
   padding-bottom: 2px;
   border-bottom: 2px solid #000;
   display: inline-block;
+}
+.blog-item:focus .blog-item__image img {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .blog-item__image:hover img {
   transform: scale(1.05);

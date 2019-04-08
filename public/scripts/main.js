@@ -129,11 +129,30 @@ if(ageGate){
     }, 700);
     // Set a cookie to be remembered for next time!
     setCookie("ageGateRemembered", "true", 365);
+    ageGateYes.setAttribute('tabindex', '-1');
+    ageGateNo.setAttribute('tabindex', '-1');
+  });
+
+  ageGateYes.addEventListener('keydown', function(e) {
+    if (e.keyCode === 13) {
+      this.click()
+    }
   });
 
   // ON NO, let's really make that kids thing stand out for a second
-  ageGateNo.addEventListener('click', function(){
+  ageGateNo.addEventListener('click', function(e){
     ageGateDisc.style.color = '#fff';
+  });
+
+  ageGateNo.addEventListener('keydown', function(e) {
+    if (e.keyCode === 9) {
+      e.preventDefault();
+      e.stopPropagation();
+      ageGateYes.focus();
+    }
+    if (e.keyCode === 13) {
+      this.click()
+    }
   });
 
   // Finally, if the user refreshes, but already said yes, let's unlock the page

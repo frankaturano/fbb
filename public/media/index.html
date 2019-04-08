@@ -20,8 +20,8 @@
   </div>
   <nav>
     <div class="limit-container">
-      <a href="../"><span class="logo">Five Boroughs Brewing Co.</span></a>
-      <img src="../images/hamburger.png" class="hamburger">
+      <a href="../" class="nav-logo-link-wrapper"><span class="logo">Five Boroughs Brewing Co.</span></a>
+      <img src="../images/hamburger.png" class="hamburger" class="hamburger" alt="menu icon">
       <div class="nav-close">+</div>
       <ul>
         <li>
@@ -40,10 +40,10 @@
           <a href="../taproom/">Taproom</a>
         </li>
         <li class="nav-social-icons">
-          <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/"></a>
-          <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/"></a>
-          <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs"></a>
-          <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo"></a>
+          <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/" aria-label="facebook"></a>
+          <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/" aria-label="instagram"></a>
+          <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs" aria-label="twitter"></a>
+          <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo" aria-label="untapped"></a>
         </li>
       </ul>
     </div>
@@ -56,16 +56,16 @@
     <p class="dek">Thanks for your interest in Five Boroughs Brewing Co. You can either shoot us an email directly at media@fiveboroughs.com, or fill out the form below. (We swear there's a human on the other side.) We'll field your inquiry as soon as we can. Cheers!</p>
 
     <form id="media-form">
-      <label>Your Name:</label>
-      <input name="Your Name" type="text" required="true" />
-      <label>Contact Email:</label>
-      <input name="Contact Email" type="email" required="true" />
-      <label>Media Outlet/Affiliation:</label>
-      <input name="Media Outlet/Affiliation" type="text" required="true" />
-      <label>What can we help out with? Whom can we connect you to?</label>
-      <textarea name="What can we help out with? Whom can we connect you to?" type="text" required="true"></textarea>
-      <label>If you're on a deadline, let us know when your drop-dead time-of-contact is (keeping in mind we're a working business, please!)</label>
-      <input name="Drop dead time of contact" type="datetime-local" />
+      <label for="your-name">Your Name:</label>
+      <input id="your-name" name="Your Name" type="text" required="true" />
+      <label for="contact-email">Contact Email:</label>
+      <input id="contact-email" name="Contact Email" type="email" required="true" />
+      <label for="media">Media Outlet/Affiliation:</label>
+      <input id="media" name="Media Outlet/Affiliation" type="text" required="true" />
+      <label for="what">What can we help out with? Whom can we connect you to?</label>
+      <textarea id="what" name="What can we help out with? Whom can we connect you to?" type="text" required="true"></textarea>
+      <label for="deadline">If you're on a deadline, let us know when your drop-dead time-of-contact is (keeping in mind we're a working business, please!)</label>
+      <input id="deadline" name="Drop dead time of contact" type="datetime-local" />
       <input type="submit" value="Submit"></input>
     </form>
   </div>
@@ -110,7 +110,7 @@
               <div class="link">718.355.8575</div>
             </a>
             <div class="label label--divider">Our Address</div>
-            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" style="text-decoration: none; cursor: pointer">
+            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" aria-label="get directions to the brewery" style="text-decoration: none; cursor: pointer">
               <div class="link">215 47<sup>th</sup> Street</div>
               <div class="link">Brooklyn, NY 11220</div>
             </a>
@@ -130,7 +130,7 @@
         </div>
       </div>
     </section>
-    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym"></a>
+    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" aria-label="get directions to the brewery"></a>
     <section class="footer--light">
       <div class="limit-container">
         <div class="copyright">&copy; 2017 Five Boroughs Brewing Co.</div>

@@ -21,8 +21,8 @@
   </div>
   <nav>
     <div class="limit-container">
-      <a href="../"><span class="logo">Five Boroughs Brewing Co.</span></a>
-      <img src="../images/hamburger.png" class="hamburger">
+      <a href="../" class="nav-logo-link-wrapper"><span class="logo">Five Boroughs Brewing Co.</span></a>
+      <img src="../images/hamburger.png" class="hamburger" class="hamburger" alt="menu icon">
       <div class="nav-close">+</div>
       <ul>
         <li>
@@ -41,10 +41,10 @@
           <a href="../taproom/">Taproom</a>
         </li>
         <li class="nav-social-icons">
-          <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/"></a>
-          <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/"></a>
-          <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs"></a>
-          <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo"></a>
+          <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/" aria-label="facebook"></a>
+          <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/" aria-label="instagram"></a>
+          <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs" aria-label="twitter"></a>
+          <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo" aria-label="untapped"></a>
         </li>
       </ul>
     </div>
@@ -60,39 +60,39 @@
 
     <div class="limit-container">
       <form id="sales-form">
-        <label>Account Name:<super>*</super></label>
-        <input type="text" name="Account Name" required="true" />
-        <label>Account Address:<super>*</super></label>
-        <input type="text" name="Account Address" required="true" />
-        <label>Contact Name:<super>*</super></label>
-        <input type="text" name="Contact Name" required="true" />
-        <label>Contact Email:<super>*</super></label>
-        <input type="email" name="Contact Email" required="true" />
-        <label>Contact Phone:</label>
-        <input type="tel" name="Contact Phone" />
+        <label for="account-name">Account Name:<super>*</super></label>
+        <input id="account-name" type="text" name="Account Name" required="true" />
+        <label for="account-address">Account Address:<super>*</super></label>
+        <input id="account-address" type="text" name="Account Address" required="true" />
+        <label for="contact-name">Contact Name:<super>*</super></label>
+        <input id="contact-name" type="text" name="Contact Name" required="true" />
+        <label for="contact-email">Contact Email:<super>*</super></label>
+        <input id="contact-email" type="email" name="Contact Email" required="true" />
+        <label for="contact-phone">Contact Phone:</label>
+        <input id="contact-phone" type="tel" name="Contact Phone" />
         <div class="required-helper"><super>*</super>Required</div>
         <label>Did you try any Five Boroughs Brewing Co. beers? If so, which did you enjoy and would you consider purchasing for your respective accounts?</label>
         <div class="checkbox-group">
           <span class="checkbox-item">
-            <input type="checkbox" name="Enjoyed and would purchase - IPA?"><span class="checkbox-label">IPA</span>
+            <input type="checkbox" aria-label="Did you enjoy and would purchase our IPA?" name="Enjoyed and would purchase - IPA?"><span class="checkbox-label" aria-hidden="true">IPA</span>
           </span>
           <span class="checkbox-item">
-            <input type="checkbox" name="Enjoyed and would purchase - PILSNER?"><span class="checkbox-label">Pilsner</span>
+            <input type="checkbox" aria-label="Did you enjoy and would purchase our Pilsner?" name="Enjoyed and would purchase - PILSNER?"><span class="checkbox-label" aria-hidden="true">Pilsner</span>
           </span>
           <span class="checkbox-item">
-            <input type="checkbox" name="Enjoyed and would purchase - GOSE?"><span class="checkbox-label">Gose</span>
+            <input type="checkbox" aria-label="Did you enjoy and would purchase our Gose?" name="Enjoyed and would purchase - GOSE?"><span class="checkbox-label" aria-hidden="true">Gose</span>
           </span>
           <span class="checkbox-item">
-            <input type="checkbox" name="Enjoyed and would purchase - HOPPY LAGER?"><span class="checkbox-label">Hoppy Lager</span>
+            <input type="checkbox" aria-label="Did you enjoy and would purchase our Hoppy Lager?" name="Enjoyed and would purchase - HOPPY LAGER?"><span class="checkbox-label" aria-hidden="true">Hoppy Lager</span>
           </span>
           <span class="checkbox-item">
-            <input type="checkbox" name="Enjoyed and would purchase - OTHER?"><span class="checkbox-label">Other</span>
+            <input type="checkbox" aria-label="Did you enjoy and would purchase any other beer?" name="Enjoyed and would purchase - OTHER?"><span class="checkbox-label" aria-hidden="true">Other</span>
           </span>
         </div>
-        <label>Anything else to tell us about why you liked or didn't like our beers?</label>
-        <textarea name="Anything else to tell us about why you liked or didn't like our beers?"></textarea>
-        <label>What types of beer would you like to see Five Boroughs Brewing Co. produce that would be a great addition to your account portfolio?</label>
-        <textarea name="What types of beer would you like to see Five Boroughs Brewing Co. produce that would be a great addition to your account portfolio?"></textarea>
+        <label for="anything-else">Anything else to tell us about why you liked or didn't like our beers?</label>
+        <textarea id="anything-else" name="Anything else to tell us about why you liked or didn't like our beers?"></textarea>
+        <label for="what-types">What types of beer would you like to see Five Boroughs Brewing Co. produce that would be a great addition to your account portfolio?</label>
+        <textarea id="what-types" name="What types of beer would you like to see Five Boroughs Brewing Co. produce that would be a great addition to your account portfolio?"></textarea>
         <p style="max-width:600px;margin: 0 auto 40px auto">Five Boroughs Brewing Co. is all about community. Swing by the brewery during our retail account open hours, on Mondays between 3-6 p.m., to see and taste everything our facility has to offer. Please RSVP to sales@fiveboroughs.com with your headcount and expected arrival time. Our team will confirm with you as soon as we can.</p>
         <input type="submit" value="Submit"></input>
       </form>
@@ -139,7 +139,7 @@
               <div class="link">718.355.8575</div>
             </a>
             <div class="label label--divider">Our Address</div>
-            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" style="text-decoration: none; cursor: pointer">
+            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" aria-label="get directions to the brewery" style="text-decoration: none; cursor: pointer">
               <div class="link">215 47<sup>th</sup> Street</div>
               <div class="link">Brooklyn, NY 11220</div>
             </a>
@@ -159,7 +159,7 @@
         </div>
       </div>
     </section>
-    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym"></a>
+    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" aria-label="get directions to the brewery"></a>
     <section class="footer--light">
       <div class="limit-container">
         <div class="copyright">&copy; 2017 Five Boroughs Brewing Co.</div>

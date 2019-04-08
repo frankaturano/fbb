@@ -34,15 +34,15 @@
   <!-- WELCOME -->
   <section class="welcome">
     <div class="absolute-center">
-      <img class="united-logo" src="./images/united-logo.png" />
+      <img class="united-logo" src="./images/united-logo.png" alt="united nyc by beer" />
       <h1>
         Five Boroughs Brewing Co.
         Makes craft beer that brings New York City together.
       </h1>
       <div class="age__gate">
         <div class="age__gate--question">Are you over 21?</div>
-        <div class="age__gate--choice choice--yes">YES</div>
-        <div class="age__gate--choice choice--no">NO</div>
+        <div class="age__gate--choice choice--yes" role="button" tabindex="0">YES</div>
+        <div class="age__gate--choice choice--no" role="button" tabindex="0">NO</div>
         <div class="age__gate--disclaimer">You must be of legal drinking age to join us.</div>
       </div>
     </div>
@@ -52,8 +52,8 @@
   <section class="hero">
     <nav>
       <div class="limit-container">
-        <a href="./"><a href="./"><span class="logo">Five Boroughs Brewing Co.</span></a></a>
-        <img src="./images/hamburger.png" class="hamburger">
+        <a href="./" class="nav-logo-link-wrapper"><span class="logo">Five Boroughs Brewing Co.</span></a>
+        <img src="./images/hamburger.png" class="hamburger" alt="menu icon">
         <div class="nav-close">+</div>
         <ul>
           <li>
@@ -72,10 +72,10 @@
             <a href="./taproom/">Taproom</a>
           </li>
           <li class="nav-social-icons">
-            <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/"></a>
-            <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/"></a>
-            <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs"></a>
-            <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo"></a>
+            <a target="_blank" class="icon icon-facebook" href="https://www.facebook.com/fiveboroughsbrewing/" aria-label="facebook"></a>
+            <a target="_blank" class="icon icon-instagram" href="https://www.instagram.com/fiveboroughsbrewing/" aria-label="instagram"></a>
+            <a target="_blank" class="icon icon-twitter" href="https://twitter.com/fiveboroughs" aria-label="twitter"></a>
+            <a target="_blank" class="icon icon-untappd" href="https://untappd.com/FiveBoroughsBrewingCo" aria-label="untapped"></a>
           </li>
         </ul>
       </div>
@@ -94,12 +94,12 @@
           <a href="./beer/">view our beers</a>
         </div>
         <div class="promo__image">
-          <img src="./images/explore-one.jpg" />
+          <img src="./images/explore-one.jpg" alt="beer kegs" />
         </div>
       </div>
       <div class="promo__secondary promo--left">
         <div class="promo__image">
-          <img src="./images/explore-two.jpg" />
+          <img src="./images/explore-two.jpg" alt="worker setting up brewing systems" />
         </div>
         <div class="promo__text">
           <h1>WHO WE ARE</h1>
@@ -109,7 +109,7 @@
       </div>
       <div class="promo__secondary promo--right">
         <div class="promo__image">
-          <img src="./images/explore-three.jpg" />
+          <img src="./images/explore-three.jpg" alt="bartender pouring beer" />
         </div>
         <div class="promo__text">
           <h1>VISIT US IN NYC</h1>
@@ -184,7 +184,7 @@
               <div class="link">718.355.8575</div>
             </a>
             <div class="label label--divider">Our Address</div>
-            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" style="text-decoration: none; cursor: pointer">
+            <a class="link--google-maps" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" aria-label="get directions to the brewery" style="text-decoration: none; cursor: pointer">
               <div class="link">215 47<sup>th</sup> Street</div>
               <div class="link">Brooklyn, NY 11220</div>
             </a>
@@ -204,7 +204,7 @@
         </div>
       </div>
     </section>
-    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym"></a>
+    <a class="map ready" target="_blank" href="https://goo.gl/maps/sY4S3z2UWym" aria-label="get directions to the brewery"></a>
     <section class="footer--light">
       <div class="limit-container">
         <div class="copyright">&copy; 2017 Five Boroughs Brewing Co.</div>
