@@ -97,72 +97,72 @@
   <div class="steps-wrapper">
 
     <div class="step active step-one limit-container" data-dek="What kind of place did you buy our beer?">
-      <div class="choice place-of-purchase bar" data-form-value="Local Bar">
-        <img src="../images/BAR.svg" />
+      <div class="choice place-of-purchase bar" data-form-value="Local Bar" tabindex="0" aria-label="Local Bar" role="button" aria-pressed="false">
+        <img src="../images/BAR.svg" alt="Local Bar" />
         <label>Local Bar</label>
       </div>
-      <div class="choice place-of-purchase store" data-form-value="The Corner Store">
-      <img src="../images/STORE.svg" />
+      <div class="choice place-of-purchase store" data-form-value="The Corner Store" tabindex="0" aria-label="The Corner Store" role="button" aria-pressed="false">
+      <img src="../images/STORE.svg" alt="Store" />
         <label>The Corner Store</label>
       </div>
-      <div class="choice place-of-purchase events" data-form-value="Happenings In Town">
-        <img src="../images/EVENTS.svg" />
+      <div class="choice place-of-purchase events" data-form-value="Happenings In Town" tabindex="0" aria-label="Happenings In Town" role="button" aria-pressed="false">
+        <img src="../images/EVENTS.svg" alt="Events" />
         <label>Happenings In Town</label>
       </div>
-      <div class="choice place-of-purchase taproom" data-form-value="Our Taproom">
-        <img src="../images/TAPROOM.svg" />
+      <div class="choice place-of-purchase taproom" data-form-value="Our Taproom" tabindex="0" aria-label="Our Taproom" role="button" aria-pressed="false">
+        <img src="../images/TAPROOM.svg" alt="Taproom" />
         <label>Our Taproom</label>
       </div>
 
       <div class="step-nav">
-        <span class="nav-prev disabled"></span><span class="nav-next"></span>
+        <span class="nav-prev disabled"></span><span class="nav-next" tabindex="-1" aria-label="next" role="button"></span>
       </div>
     </div>
 
     <div class="step step-two limit-container" data-dek="Where did you taste this beer? Don’t worry—this stays between us.">
-      <label>Name:</label>
-      <input type="text" data-form-value="query" />
+      <label for="step-two-name">Name:</label>
+      <input id="step-two-name" type="text" data-form-value="query" />
 
       <div class="step-nav">
-        <span class="nav-prev"></span><span class="nav-next"></span>
+        <span class="nav-prev" tabindex="0" role="button" aria-label="previous"></span><span class="nav-next"role="button" tabindex="-1" aria-label="next"></span>
       </div>
     </div>
 
     <div class="step step-three limit-container" data-dek="How was your beer packaged?">
-      <div class="choice place-of-purchase draft" data-form-value="On Draft">
-        <img src="../images/DRAFT.svg" />
+      <div class="choice place-of-purchase draft" data-form-value="On Draft" aria-label="On Draft" tabindex="0" role="button" aria-pressed="false">
+        <img src="../images/DRAFT.svg" alt="Draft" />
         <label>On Draft</label>
       </div>
-      <div class="choice place-of-purchase package" data-form-value="In Cans">
-        <img src="../images/PACKAGE.svg" />
+      <div class="choice place-of-purchase package" data-form-value="In Cans" aria-label="In Cans" tabindex="0" role="button" aria-pressed="false">
+        <img src="../images/PACKAGE.svg" alt="Package" />
         <label>In Cans</label>
       </div>
-      <div class="choice place-of-purchase growler" data-form-value="Growlers">
-        <img src="../images/GROWLER.svg" />
+      <div class="choice place-of-purchase growler" data-form-value="Growlers" aria-label="Growlers" tabindex="0" role="button" aria-pressed="false">
+        <img src="../images/GROWLER.svg" alt="Growler" />
         <label>Growlers</label>
       </div>
 
       <div class="step-nav">
-        <span class="nav-prev"></span><span class="nav-next"></span>
+        <span class="nav-prev" tabindex="0" aria-label="previous"></span><span class="nav-next" tabindex="-1" aria-label="next"></span>
       </div>
     </div>
 
     <div class="step step-four limit-container" data-dek="Consider us beer detectives.">
-      <label>Date Observed:</label>
-      <input type="date" max="9999-12-31" />
+      <label for="date-observed">Date Observed:</label>
+      <input id="date-observed" type="date" max="9999-12-31" />
       <div class="date-packaged-grouping">
-        <label>Date Packaged:</label>
-        <input type="date" max="9999-12-31" />
+        <label for="date-packaged">Date Packaged:</label>
+        <input id="date-packaged" type="date" max="9999-12-31" />
       </div>
-      <label>Type Of Beer:</label>
+      <label for="type-of-beer">Type Of Beer:</label>
       <div class="select-custom">
-        <select id="type-of-beer">
+        <select id="type-of-beer" tabindex="0">
 
         </select>
       </div>
 
       <div class="step-nav">
-        <span class="nav-prev"></span><span class="nav-next"></span>
+        <span class="nav-prev" tabindex="0" aria-label="previous"></span><span class="nav-next" tabindex="-1" aria-label="next"></span>
       </div>
     </div>
 
@@ -178,19 +178,19 @@
     <div class="step step-five limit-container" >
 
       <form id="quality-form">
-        <label>Name:</label>
-        <input type="text" required="true" />
-        <label>Email:</label>
-        <input type="email" required="true" />
-        <label>Comments:</label>
-        <textarea required="true"></textarea>
+        <label for="q-name">Name:</label>
+        <input id="q-name" type="text" required="true" />
+        <label for="q-email">Email:</label>
+        <input id="q-email" type="email" required="true" />
+        <label for="q-comments">Comments:</label>
+        <textarea id="q-comments" required="true"></textarea>
         <label>Can we reach out?</label>
-        <span class="reach-out-yes chosen">YES</span> <span class="reach-out-no">NO</span>
+        <span class="reach-out-yes chosen" tabindex="0" aria-label="yes" role="button">YES</span> <span class="reach-out-no" aria-label="no" role="button" tabindex="0">NO</span>
         <input type="submit" value="Submit" />
       </form>
 
       <div class="step-nav">
-        <span class="nav-prev"></span><span class="nav-next disabled"></span>
+        <span class="nav-prev" tabindex="0" aria-label="previous"></span><span class="nav-next disabled" tabindex="-1" aria-label="next"></span>
       </div>
     </div>
 
@@ -318,6 +318,11 @@
         if(newDek) dek.innerHTML = newDek;
 
       });
+      navigators[i].addEventListener('keydown', function (e) {
+        if (e.keyCode === 13) {
+          this.click()
+        }
+      })
     }
 
     var choices = document.querySelectorAll('.choice');
@@ -327,10 +332,16 @@
         for(var j = 0; j < otherChoices.length; j++){
           otherChoices[j].style.opacity = ".5";
           otherChoices[j].classList.remove('chosen-choice');
+          otherChoices[j].setAttribute('aria-pressed', false);
         }
         this.style.opacity = "1";
         this.classList.add('chosen-choice');
+        this.setAttribute('aria-pressed', true);
         this.parentElement.classList.add('choice-made');
+        navigators[1].setAttribute('tabindex', 0);
+        if (document.querySelector('.step-three').classList.contains('choice-made')) {
+          navigators[5].setAttribute('tabindex', 0);
+        }
 
         // Kill date packaged
         var stepThreeChoice = document.querySelector('.step-three .chosen-choice');
@@ -342,15 +353,21 @@
         }
         stepFourInputs[0].onchange();
         stepFourInputs[1].onchange();
-
+      })
+      choices[i].addEventListener('keydown', function (e) {
+        if (e.keyCode === 13) {
+          this.click()
+        }
       })
     }
 
     document.querySelector('.step-two input').addEventListener('keyup', function(){
       if(this.value){
         this.parentElement.classList.add('choice-made');
+        navigators[3].setAttribute('tabindex', '0');
       }else{
         this.parentElement.classList.remove('choice-made');
+        navigators[3].setAttribute('tabindex', '-1');
       }
     });
 
@@ -362,11 +379,14 @@
 
       if(stepFourInputs[0].value.length > 0 && stepFourInputs[1].value.length > 0){
         document.querySelector('.step-four').classList.add('choice-made');
+        navigators[7].setAttribute('tabindex', 0);
       }else if(stepFourInputs[0].value.length > 0 && draftChosen){
         // Kill date packaged
         document.querySelector('.step-four').classList.add('choice-made');
+        navigators[7].setAttribute('tabindex', 0);
       }else{
         document.querySelector('.step-four').classList.remove('choice-made');
+        navigators[7].setAttribute('tabindex', '-1');
       }
     };
     stepFourInputs[0].onchange = validateStepFour;
@@ -387,7 +407,6 @@
       this.classList.add('chosen');
       document.querySelector('.reach-out-yes').classList.remove('chosen');
     })
-
 
     document.getElementById('quality-form').addEventListener('submit', function(e){
       e.preventDefault();

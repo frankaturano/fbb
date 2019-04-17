@@ -120,6 +120,14 @@ p.h2-dek{
   pointer-events: all;
   background-color: rgba(0,0,0,1);
 }
+.step-nav .nav-next:focus {
+  outline: none;
+  transform: scale(1.1);
+}
+.step-nav .nav-prev:focus {
+  outline: none;
+  transform: rotate(180deg) scale(1.1);
+}
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -143,6 +151,14 @@ p.h2-dek{
   height: auto;
   vertical-align: bottom;
   cursor: pointer;
+  transition: transform .3s;
+}
+.choice:focus {
+  outline: none;
+  transform: scale(1.1);
+}
+.chosen-choice:focus {
+  outline: none;
 }
 label{
   font-size: 18px;
@@ -182,6 +198,9 @@ input:focus,
 select:focus,
 textarea:focus{
   outline: none;
+}
+select:focus {
+  border: 2px solid #000;
 }
 .select-custom {
   position: relative;
