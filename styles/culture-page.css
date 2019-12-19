@@ -1,0 +1,113 @@
+/*Visit Page Overrides Of Main CSS*/
+.culture-page .logo {
+  background-image: url(../images/footer-logo.png);
+}
+.culture-page nav li{
+  color: #717073;
+}
+.culture-page .hamburger {
+  background: #000;
+  width: 55px;
+  height: 55px;
+  padding: 10px 0;
+  margin: 22px 0;
+}
+.culture-page nav {
+  margin: 80px 0 80px 0;
+  background: #fff;
+}
+.culture-page nav.active,
+.culture-page nav.sticky{
+  margin: 0;
+}
+
+.culture-page h1{
+  font-size: 54px;
+  line-height: 60px;
+}
+
+
+.blog-items {
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin: 20px -20px;
+}
+.blog-item {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  width: 460px;
+  background-size: cover;
+  margin: 20px;
+  transition: transform .3s;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.blog-item:focus {
+  outline: none;
+}
+.blog-item__image {
+  width: 100%;
+  background: #eee;
+  font-size: 0;
+  overflow: hidden;
+}
+.blog-item__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 40px 0 15px 0;
+}
+.blog-item__dek {
+  font-size: 16px;
+  line-height: 18px;
+  color: #717073;
+  margin-bottom: 15px;
+}
+.blog-item__link{
+  font-size: 14px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+}
+.blog-item:focus .blog-item__image img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.blog-item__image:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.blog-item__image img {
+  transition: transform .25s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+}
+
+@media(max-width: 850px){
+  .culture-page h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media(max-width: 760px) {
+  .culture-page nav{
+    margin: 40px 0 40px 0;
+  }
+}
+
+@media(max-width: 650px){
+  .culture-page h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}

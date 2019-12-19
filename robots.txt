@@ -1,0 +1,5 @@
+# robots
+Sitemap: http://fiveboroughs.com/sitemap.xml
+User-agent: *
+Disallow: /sales
+Disallow: /media

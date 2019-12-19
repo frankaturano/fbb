@@ -1,0 +1,308 @@
+/*html, body {
+  height: 100%;
+  overflow: hidden;
+}
+.story-page-inner{
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}*/
+.hero--story{
+  background-image: url('../images/hero-story.jpg');
+  background-position: top center;
+}
+.story-page h1,
+.story-page h2 {
+  font-size: 70px;
+  max-width: 786px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'helsinki-black', sans-serif;
+}
+.fullbleed-img {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url('../images/story-main.jpg');
+  margin-bottom: 70px;
+  margin-top: 100px;
+  background-size: cover;
+  background-position: center center;
+}
+.story-page .fullbleed-img {
+  margin-bottom: 70px;
+}
+.the-team{
+  max-width: 940px;
+  margin: 100px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.the-team__member {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #000;
+}
+.the-team__member::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.the-team__member--info {
+  float: left;
+  width: 50%;
+}
+.member--name {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'helsinki-black', sans-serif;
+  width: 50%;
+  float: left;
+}
+/*.member--dek{
+  width: 50%;
+  display: table-cell;
+}*/
+.story-page p.the-team__member--label {
+  text-align: right;
+  padding-left: 20px;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+.the-team__member:nth-child(1) .member--name,
+.the-team__member:nth-child(6) .member--name{
+  color:#00a8c5;
+}
+.the-team__member:nth-child(2) .member--name,
+.the-team__member:nth-child(7) .member--name{
+  color:#6cac43;
+}
+.the-team__member:nth-child(3) .member--name,
+.the-team__member:nth-child(8) .member--name{
+  color:#ef4044;
+}
+.the-team__member:nth-child(4) .member--name,
+.the-team__member:nth-child(9) .member--name{
+  color:#f9a01b;
+}
+.the-team__member:nth-child(5) .member--name,
+.the-team__member:nth-child(10) .member--name{
+  color:#bb6cac;
+}
+.story-page p {
+  font-size: 20px;
+  color: #717073;
+  line-height: 24px;
+}
+p.h3-dek{
+  text-align: center;
+  margin-bottom: 75px;
+}
+.story-page h3 {
+  text-transform: uppercase;
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+}
+.parallax-row {
+  position: relative;
+  /*margin: 120px 0;
+  padding: 120px 0;*/
+  padding-top: 100px;
+}
+.parallax-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.text-parallax-left{
+  width: 50%;
+  padding: 0 90px;
+  float: left;
+  box-sizing: border-box;
+}
+.image-parallax-right{
+  float: right;
+  width: 50%;
+  box-sizing: border-box;
+  /*transform: translateY(-5%) translateX(6.125%) translateZ(-.125px) scale(1.125);*/
+}
+.text-parallax-right{
+  width: 50%;
+  float: right;
+  box-sizing: border-box;
+  padding: 0 90px;
+}
+.image-parallax-left{
+  float: left;
+  width: 50%;
+  /*transform: translateY(0%) translateX(-6.125%) translateZ(-.125px) scale(1.125);*/
+}
+.text-parallax--title{
+  font-size: 42px;
+  line-height: 44px;
+  max-width: 560px;
+  margin: 0 auto 20px auto;
+}
+.story-page p.text-parallax--dek{
+  font-size: 24px;
+  line-height: 26px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.parallax-row--special{
+  text-align: center;
+  margin: 0;
+}
+.image-parallax-special-one {
+  max-width: 25%;
+  display: inline-block;
+  margin-right: 50px;
+  /*transform: translateY(-50%) translateX(-100%) translateZ(-.75px) scale(2);*/
+}
+.image-parallax-special-two {
+  max-width: 40%;
+  display: inline-block;
+  margin-left: 50px;
+  /*transform: translateX(40%) translateZ(-0.4px) scale(1.5);*/
+}
+
+@media(max-width: 1200px){
+  .text-parallax-left {
+    width: 65%;
+    padding: 0 40px;
+  }
+  .image-parallax-right {
+    width: 35%;
+    /*transform: translateY(0%) translateX(11.5%) translateZ(-0.125px) scale(1.125);*/
+    transform: none !important;
+  }
+  .text-parallax--title {
+    font-size: 34px;
+    line-height: 36px;
+  }
+  .image-parallax-left {
+    width: 35%;
+    /*transform: translateY(0%) translateX(-11.5%) translateZ(-0.125px) scale(1.125);*/
+    transform: none !important;
+  }
+  .text-parallax-right {
+    width: 65%;
+  }
+  .image-parallax-special-one {
+    /*transform: translateY(-40%) translateX(-100%) translateZ(-.75px) scale(2);*/
+    transform: none !important;
+  }
+  .image-parallax-special-two{
+    transform: none !important;
+  }
+}
+
+@media(max-width: 850px){
+  .story-page h1,
+  .story-page h2 {
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 580px;
+    font-size: 44px;
+    line-height: 50px;
+  }
+  .image-parallax-right {
+    transform: none;
+    width: 100%;
+    padding: 0 40px;
+    margin-top: 20px;
+  }
+  .image-parallax-special-one {
+    transform: none;
+    max-width: 50%;
+    float: right;
+    padding: 0 40px 0 20px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .image-parallax-special-two {
+    transform: none;
+    max-width: 50%;
+    float: left;
+    padding: 0 20px 0 40px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .image-parallax-left {
+    transform: none;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .text-parallax-left {
+    width: 100%;
+  }
+  .parallax-row {
+    margin: 0;
+  }
+  .text-parallax-right {
+    width: 100%;
+  }
+  .text-parallax-right {
+    padding: 0 40px;
+  }
+  .text-parallax--title,
+  .story-page p.text-parallax--dek{
+    max-width: 100%;
+  }
+}
+@media(max-width: 650px){
+  .story-page h1,
+  .story-page h2 {
+    padding: 0 20px;
+    box-sizing: border-box;
+    max-width: 460px;
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .parallax-row{
+    padding: 60px 0;
+  }
+  .text-parallax--title {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .image-parallax-right {
+    padding: 0 20px;
+  }
+  .text-parallax-left {
+    padding: 0 20px;
+  }
+  .text-parallax-right {
+    padding: 0 20px;
+  }
+  .image-parallax-left {
+    padding: 0 20px;
+  }
+  .image-parallax-special-two {
+    padding: 0 10px 0 20px;
+  }
+  .image-parallax-special-one {
+    padding: 0 20px 0 10px;
+  }
+  .story-page h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 40px;
+  }
+  .the-team__member--info,
+  .member--name{
+    width: 100%;
+  }
+  .story-page p.the-team__member--label{
+    text-align: left;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,186 @@
+/*Visit Page Overrides Of Main CSS*/
+.visit-page .logo {
+  background-image: url(../images/footer-logo.png);
+}
+.visit-page nav li{
+  color: #717073;
+}
+.visit-page .hamburger {
+  background: #000;
+  width: 55px;
+  height: 55px;
+  padding: 10px 0;
+  margin: 22px 0;
+}
+.visit-page nav {
+  margin: 80px 0 80px 0;
+  background: #fff;
+}
+.visit-page nav.active,
+.visit-page nav.sticky{
+  margin: 0;
+}
+
+.visit-page h1{
+  font-size: 54px;
+  line-height: 60px;
+}
+.visit-page h2 {
+  font-family: 'pdu-stencil', cursive;
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 60px;
+  text-align: center;
+}
+.visit-page p {
+  font-size: 20px;
+  color: #717073;
+  line-height: 24px;
+}
+
+p.h2-dek{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.visit-hero{
+  margin: 88px 0;
+}
+
+.visit-page .taproom-hours,
+.visit-page .on-tap{
+  max-width: 940px;
+  margin: 0 auto 88px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.visit-page .taproom-hours{
+  margin-top: 100px;
+}
+
+.on-tap__beer {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #000;
+}
+.on-tap__beer--info {
+  width: 100%;
+  display: table;
+}
+.beer--name {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'helsinki-black', sans-serif;
+  margin-bottom: 15px;
+  display: table-cell;
+}
+.beer--dek{
+  display: table-cell;
+}
+.on-tap__beer--label {
+  display: table-cell;
+  vertical-align: top;
+  text-align: right;
+  padding-left: 30px;
+  min-width: 100px;
+}
+
+.beer--name.beer--ipa {
+  color: #6cac43;
+}
+
+.beer--name.beer--pilsner {
+  color: #f9a01b;
+}
+
+.beer--name.beer--gose {
+  color: #bb6cac;
+}
+
+.beer--name.beer--hoppylager {
+  color: #00a8c5;
+}
+
+.beer--name.beer--tinyjuicyipa {
+  color: #ff6600;
+}
+
+.taproom-hours__day {
+  display: table;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000;
+}
+.taproom-day-range {
+  display: table-cell;
+  width: 50%;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-family: 'helsinki-black', sans-serif;
+}
+.taproom-day-times {
+  display: table-cell;
+  width: 50%;
+  text-align: right;
+  padding-left: 20px;
+}
+.come-meet-us{
+  margin: 80px 0;
+  text-align: center;
+}
+.come-meet-us h3{
+  text-transform: uppercase;
+  font-size: 32px;
+  font-family: 'helsinki-black', sans-serif;
+  margin-bottom: 15px;
+}
+p.address{
+  text-transform: uppercase;
+}
+.come-meet-us .link--google-maps{
+  color: #717073;
+  transition: color .2s;
+  -webkit-transition: color .2s;
+  font-size: 24px;
+  line-height: 28px;
+}
+.come-meet-us .link--google-maps:hover{
+  color: #25a664;
+}
+
+.visit-page .load-more{
+  margin: 40px 0 100px 0;
+}
+
+@media(max-width: 850px){
+  .visit-page h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media(max-width: 760px) {
+  .visit-page nav{
+    margin: 40px 0 40px 0;
+  }
+}
+
+@media(max-width: 650px){
+  .visit-page h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .beer--dek {
+    width: 75%;
+  }
+  .on-tap__beer--label {
+    width: 25%;
+  }
+  .visit-page h2{
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
